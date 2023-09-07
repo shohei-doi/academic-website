@@ -93,6 +93,29 @@ project:
 
 $\leadsto$うまく行けば、右側に生成されたウェブサイトが表示されます。
 
+### Google Analytics (optional)
+
+[Google Analytics](https://marketingplatform.google.com/intl/ja/about/analytics/)とはウェブサイトへのアクセスなどを解析するサービスです。
+
+- Google Analyticsのアカウントを作成します。
+- プロパティを作成します。
+  - 設定は適当で構いません。
+- プラットフォームでウェブを選択します。
+  - URLは`https://<username>.github.io`に、ストリーム名は適当に決めます。
+- 測定IDをコピーし、`_quarto.yml`に追記します。
+
+```yaml
+website:
+  title: "..."
+  google-analytics: "G-..." # <1>
+```
+
+1. この行を追記します。
+
+そのうち、測定が開始されます。
+
+- researchmapも測定できます。
+
 ## ウェブサイトの公開
 
 以降、ファイルを修正するたびに`Source Control`をクリックして、次の作業を行います。
@@ -102,4 +125,20 @@ $\leadsto$うまく行けば、右側に生成されたウェブサイトが表�
 
 $\leadsto$これにより、変更内容がリポジトリに記録されます。
 
-ウェブサイトを公開する場合は、`push`を行います（`Sync Changes`というボタンでも可能）。
+ウェブサイトを公開する場合は、`push`を行います（次回から`Sync Changes`というボタンでも可能）。
+
+最後に、GitHubでリポジトリのページに飛び、`Settings`の`Pages`で`Branch`をmasterのdocsに設定します。
+
+少し、時間が経つと`Your site is live at...`と表示されますので、公開されたウェブサイトにアクセスします。
+
+- 最初の一回だけでOK。
+- `https://<username>.github.io`でもアクセスできることを確認しましょう。
+
+今後は、VS Codeで
+
+- `.qmd`ファイルを編集
+- `Render`でウェブサイトを作成
+- `add & commit`で変更を保存
+- `push`で公開
+
+という手順になります。

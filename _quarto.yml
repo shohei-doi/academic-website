@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "ウェブサイト for 研究者"
+  title: "気軽にウェブサイト"
   google-analytics: "G-LLFB8XFPX5"
   navbar:
     left:
