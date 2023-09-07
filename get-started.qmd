@@ -1,0 +1,105 @@
+---
+title: "セットアップ"
+---
+
+まずは、使用するツールのセットアップをしつつ、ウェブサイトの作成から公開までの一連の流れを把握します。
+
+## ウェブサイト公開の準備
+
+順番が逆のような気がしますが、ウェブサイトを公開する準備から始めたいと思います。今回は[GitHub Pages](https://docs.github.com/ja/pages)というサービスを使って、無料で公開します。
+
+### Git
+
+GitHubでウェブサイトを公開するために、OSに合わせて[Git](https://git-scm.com/)をインストールします。
+
+- インストール方法はいろいろあるようなので、調べてください。
+- ユーザーネームとメールアドレスの登録まで行ってください。
+
+### GitHub
+
+[GitHub](https://github.com/)でアカウントを作成します。**アカウント名はウェブサイトのURLになるので、それを念頭に置いて決めてください。**
+
+GitHubのリポジトリを作成します。GitHub Pagesでウェブサイトを公開するためには、`<username>.github.io`という名前のリポジトリを作成する必要があります。
+
+- 例えば、GitHubアカウント名が`shohe-doi`であれば、`shohei-doi.github.io`というリポジトリ名にします。また、URLは`https://shohei-doi.github.io/`となります。
+
+### Visual Studio Code
+
+ウェブサイトを作成するために使用するVisual Studio Code (VS code) を[インストール](https://code.visualstudio.com/)します。
+
+- 普段、RStudioを使用している人はそちらを使っても構いません。
+
+左のExtentions（4つの正方形のボタン）を押して、`GitHub Pull Requests and Issues`をインストールします。
+
+左下のAccountsを押して、GitHubにサインインします。
+
+:::{.callout-note collapse="true"}
+
+## その他の初期設定
+
+左下の設定ボタンをクリックし、`Themes`から好みのテーマを選んでください。
+
+`Settings`を適当に変更します。
+
+- `Editor: Word Wrap`を`on`にします。
+- `Editor: Font Size`を見やすい大きさにします。
+
+:::
+
+`Source Control`（二股に分かれているひもみたいなボタン）から`Clone Repository`をクリックします。
+
+`Clone from GitHub`をクリックし、先ほど作成したリポジトリを選択します。
+
+{{< kbd Enter >}}を押して、ウェブサイト用のフォルダを保存したいフォルダを選択します。
+
+- 例えば、`Document`というフォルダを選択すると、その中に`<username>.github.io`というフォルダが作成されます。
+
+### Quarto
+
+自分のOSに合ったQuartoを[インストール](https://quarto.org/docs/get-started/)します。
+
+また、VS CodeのExtentionsを押して、拡張機能としての`Quarto`をインストールします。
+
+[ウェブサイトの雛形](https://quarto.org/docs/websites/)を作成します。
+
+- {{< kbd Ctrl-Shift-P >}}を押して、`quarto`と入力します。
+- `Create Project`を選択します。
+- `Website Project`を選択します。
+- 作成したフォルダ`<username>.github.io`を選択します。
+- `/`を入力して{{< kbd Enter >}}を押します。
+
+うまくいっていると、`index.qmd`をはじめとするファイルが作成されています。
+
+`_quarto.yml`というファイルを開きます。
+
+- このファイルはウェブサイト全体の設定を記述するものです。
+
+```yaml
+project:
+  type: website
+  output-dir: docs # <1>
+```
+
+1. この行を追記します。
+
+- `yaml`ではインデントが重要になるので、間違えないでください。
+- 後にGitHubで公開する際のおまじないです。
+
+## ウェブサイトの作成
+
+`index.qmd`ファイルを開き、右上の`Render`というボタンをクリックします。
+
+- `index.qmd`は一番最初に表示されるウェブサイトです。
+
+$\leadsto$うまく行けば、右側に生成されたウェブサイトが表示されます。
+
+## ウェブサイトの公開
+
+以降、ファイルを修正するたびに`Source Control`をクリックして、次の作業を行います。
+
+- `Changes`の横の`+`ボタンをクリックして、変更を"add"します。
+- 上部の`Message`に変更内容を簡単に記載し（半角英数字）、`Commit`をクリックします。
+
+$\leadsto$これにより、変更内容がリポジトリに記録されます。
+
+ウェブサイトを公開する場合は、`push`を行います（`Sync Changes`というボタンでも可能）。

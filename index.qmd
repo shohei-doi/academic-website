@@ -1,0 +1,52 @@
+---
+title: "気楽にウェブサイトの作成・公開"
+author: 
+    - name: "土井翔平"
+      url: https://shohei-doi.github.io/
+date: today
+---
+
+## はじめに
+
+このウェブサイトは、主として研究者を対象に気楽にウェブサイトを作成し、公開する方法を解説します。
+
+- [Quarto](https://quarto.org/)というアプリケーションを用いることで、HTMLやCSSなどの知識なしにウェブサイトを作成します。
+- [GitHub Pages](https://docs.github.com/ja/pages)によって無料でウェブサイトを公開します。
+
+## Quartoとは？
+
+Quartoは`.qmd`ファイルから（RやPythonなどのファイルを作成し）[pandoc](https://pandoc.org/)によって`.html`や`.pdf`ファイルを作成します。
+
+## なぜQuartoか？
+
+ウェブサイトを作成する手段として様々なものがあります。
+
+- [Googleサイト](https://support.google.com/sites/answer/6372878?hl=ja)や[Wix](https://ja.wix.com/)、[WordPress](https://ja.wordpress.org/)など
+    - Pro: 無料、直感的に作成できる
+    - Con: （一般的に）いつまで無料か分からない、きれいに作るには手間がかかる、柔軟性に欠ける
+- [researchmap](https://researchmap.jp/)
+    - Pro: 無料、簡単に作成できる
+    - Con: かっこよくない（個人の感性）、柔軟性が皆無（特に教育向きではない）
+- [Notion](https://www.notion.so)
+    - Pro: 基本的に無料、直感的に作成できる、即時に変更が反映される
+    - Con: 柔軟性に欠ける
+- HTML/CSSを作成する
+    - Pro: ほぼ自由に作れる、フレームワーク（[Bootstrap](https://getbootstrap.jp/)など）やテンプレートが豊富
+    - Con: 学習コストが高い（特にスクラッチの場合）
+
+$\leadsto$無料で簡単にテキストベースで作成できるツールとしてQuartoを用います。
+
+- 直接、`.html`や`.css`ファイルを作成することなく、簡易なマークダウン記法（後述）を用いてウェブサイトを作成することができます。
+- いつまで開発が続くか分かりませんが、`.html`など必要なファイルは残るので、突然死することはないでしょう。
+
+:::{.callout-note collapse="true"}
+## R Markdownとの違い
+
+似たようなものとして[R Markdown](https://rmarkdown.rstudio.com/)というものがあります。似ていると言いますか、Quartoの姉／兄に当たると言えます。
+
+- QuartoとR Markdownの類似点や相違点は[公式のFAQ](https://quarto.org/docs/faq/rmarkdown.html)や[宋・矢内資料](https://www.jaysong.net/RBook/quarto.html)をご覧ください。
+
+今回、Quartoを使う理由は、R Markdownを使うにはR（そして事実上、RStudio）をインストールしなくてはいけないですが、ウェブサイトを作る上ではこれらは不要だからです。
+
+ただ、QaurtoもR Markdownもマークダウン記法で書くという点では同じなため、例えばR Markdownをすでに使っている人はQuartoもほとんど同じように使えるので、安心してください
+:::
