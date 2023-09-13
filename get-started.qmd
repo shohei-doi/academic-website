@@ -17,7 +17,7 @@ GitHubでウェブサイトを公開するために、OSに合わせて[Git](htt
 
 ### GitHub
 
-[GitHub](https://github.com/)でアカウントを作成します。**アカウント名はウェブサイトのURLになるので、それを念頭に置いて決めてください。**
+[GitHub](https://github.com/)でアカウントを作成します。**アカウント名はウェブサイトのURLになるので、それを念頭に置いて決めてください。**　
 
 GitHubのリポジトリを作成します。GitHub Pagesでウェブサイトを公開するためには、`<username>.github.io`という名前のリポジトリを作成する必要があります。
 
