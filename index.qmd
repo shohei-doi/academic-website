@@ -6,18 +6,18 @@ author:
 date: today
 ---
 
-## はじめに
+## はじめに {.unnumbered}
 
 このウェブサイトは、主として研究者を対象に気楽に簡易なウェブサイトを作成し、公開する方法を解説します。
 
 - [Quarto](https://quarto.org/)というアプリケーションを用いることで、HTMLやCSSなどの知識なしにウェブサイトを作成します。
 - [GitHub Pages](https://docs.github.com/ja/pages)によって無料でウェブサイトを公開します。
 
-## Quartoとは？
+## Quartoとは？ {.unnumbered}
 
 Quartoは`.qmd`ファイルから（RやPythonなどのファイルを作成し）[pandoc](https://pandoc.org/)によって`.html`や`.pdf`ファイルを作成します。
 
-## なぜQuartoか？
+## なぜQuartoか？ {.unnumbered}
 
 ウェブサイトを作成する手段として様々なものがあります。
 

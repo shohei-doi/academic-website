@@ -3,12 +3,10 @@ project:
   output-dir: docs
 
 website:
-  title: "気軽にウェブサイト"
+  title: "気楽にウェブサイト"
   google-analytics: "G-LLFB8XFPX5"
   navbar:
     left:
-      - href: index.qmd
-        text: はじめに
       - get-started.qmd
 
 format:
@@ -16,9 +14,11 @@ format:
     theme:
       - materia
       - custom.scss
-    mainfont: Noto Sans CJK JP Light, Helvetica Neue, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, BIZ UDPGothic, Meiryo, sans-serif
+    include-in-header: font.html
+    mainfont: Noto Sans JP, Helvetica Neue, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, BIZ UDPGothic, Meiryo, sans-serif
     link-external-newwindow: true
     toc: true
     toc-title: " "
+    number-sections: true
 
 lang: ja
