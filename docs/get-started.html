@@ -105,7 +105,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&amp;display=swap" rel="stylesheet">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -132,6 +132,22 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
   <li class="nav-item">
     <a class="nav-link active" href="./get-started.html" rel="" target="" aria-current="page">
  <span class="menu-text">セットアップ</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./basic.html" rel="" target="">
+ <span class="menu-text">作ってみる</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./multiple-contents.html" rel="" target="">
+ <span class="menu-text">内容を増やす</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./theme.html" rel="" target="">
+ <span class="menu-text">見た目を整える</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./advanced.html" rel="" target="">
+ <span class="menu-text">おまけ</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
@@ -263,7 +279,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <p>うまくいっていると、<code>index.qmd</code>をはじめとするファイルが作成されています。</p>
 <p><code>_quarto.yml</code>というファイルを開きます。</p>
 <ul>
-<li>このファイルはウェブサイト全体の設定を記述するものです。</li>
+<li>このyamlファイルはウェブサイト全体の設定を記述するものです。</li>
 </ul>
 <div class="sourceCode" id="annotated-cell-2"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="annotated-cell-2-2"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
@@ -271,18 +287,40 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="3" data-code-annotation="1" data-code-cell="annotated-cell-2">この行を追記します。</span>
+<span data-code-annotation="1" data-code-cell="annotated-cell-2" data-code-lines="3">この行を追記します。後にGitHubで公開する際のおまじないです。</span>
 </dd>
 </dl>
-<ul>
-<li><code>yaml</code>ではインデントが重要になるので、間違えないでください。</li>
-<li>後にGitHubで公開する際のおまじないです。</li>
-</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+yamlの注意点
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>_quarto.yml</code>や後述するyamlヘッダーでは、インデントとコロンのあとのスペースが重要です。これらを間違えると上手く動かないので気をつけてください。</p>
+</div>
+</div>
 </section>
 </section>
 <section id="ウェブサイトの作成" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="ウェブサイトの作成"><span class="header-section-number">2</span> ウェブサイトの作成</h2>
-<p><code>index.qmd</code>ファイルを開き、右上の<code>Render</code>というボタンをクリックします。</p>
+<p><code>about.qmd</code>と<code>styles.css</code>というファイルを削除します。また、<code>_quarto.yml</code>からも削除します。</p>
+<div class="sourceCode" id="annotated-cell-3"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> index.qmd</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-3-6" class="code-annotation-target"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-annotation="1" data-code-cell="annotated-cell-3" data-code-lines="6">これを削除する。</span>
+</dd>
+</dl>
+<p><code>index.qmd</code>ファイルを開き、右上の<a href="https://quarto.org/docs/tools/vscode.html"><code>Render</code></a>というボタンをクリックします。</p>
 <ul>
 <li><code>index.qmd</code>は一番最初に表示されるウェブサイトです。</li>
 </ul>
@@ -302,13 +340,13 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 </ul></li>
 <li>測定IDをコピーし、<code>_quarto.yml</code>を開きます。</li>
 </ul>
-<div class="sourceCode" id="annotated-cell-3"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-3-3" class="code-annotation-target"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">google-analytics</span><span class="kw">:</span><span class="at"> </span><span class="st">"G-..."</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-4"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-4-3" class="code-annotation-target"><a href="#annotated-cell-4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">google-analytics</span><span class="kw">:</span><span class="at"> </span><span class="st">"G-..."</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="3" data-code-annotation="1" data-code-cell="annotated-cell-3">この行を追記します。</span>
+<span data-code-annotation="1" data-code-cell="annotated-cell-4" data-code-lines="3"><a href="https://quarto.org/docs/websites/website-tools.html#google-analytics">この行を追記します。</a></span>
 </dd>
 </dl>
 <p>そのうち、測定が開始されます。</p>
@@ -340,7 +378,8 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <p>今後は、VS Codeで</p>
 <ol type="1">
 <li><code>.qmd</code>ファイルを編集</li>
-<li><code>Render</code>でウェブサイトを作成</li>
+<li><code>Reload</code>で変更を確認</li>
+<li><code>Render</code>で<code>.qmd</code>ファイルからウェブサイトを作成</li>
 <li><code>add &amp; commit</code>で変更を保存</li>
 <li><code>push</code>で公開</li>
 </ol>
@@ -599,6 +638,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2023, Shohei Doi</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

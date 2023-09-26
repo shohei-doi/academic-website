@@ -1,0 +1,79 @@
+---
+title: "内容を増やす"
+---
+
+About Pagesのレイアウトは多くの情報を載せるには適切ではありません。簡単な自己紹介以外の情報（例えば経歴や研究業績、授業に関する案内など）も載せる場合には次の2つの選択肢（あるいは両方）があります。
+
+## 1つのページにまとめる
+
+1つのページに情報をまとめる場合は、`index.qmd`の[一部だけをAbout Pageのレイアウト](https://quarto.org/docs/websites/website-about.html#partial-page-content)にします。
+
+具体的には、ymalヘッダーに次のような項目を追記し、
+
+```yaml
+about: 
+  ...
+  id: heading
+  ...
+```
+
+本文で、About Pageレイアウトにするところだけを、次のように囲みます。
+
+````md
+:::{#heading}
+
+About Pageのレイアウト
+
+:::
+
+通常のレイアウト
+
+````
+
+この場合、`_quarto.yml`の`left:`セクションを削除します。
+
+```yaml
+website:
+  ...
+  navbar:
+    background: primary # <1>
+  ...
+```
+
+1. `navbar:`に設定が入っていないとエラーが出るので、適当に（デフォルトの）設定を書いておきます。
+
+ナビゲーションバー自体が不要であれば`navbar:`セクションを削除します。
+
+### 目次
+
+もし、[目次](https://quarto.org/docs/output-formats/html-basics.html#table-of-contents)を付けたい場合は`_quarto.yml`に次のように書きます。
+
+```yaml
+format:
+  html:
+    ...
+    toc: true
+    toc-title: " " # <1>
+```
+
+1. 目次のタイトルを消したい場合は空白を入れておきます。
+
+## 複数のページに分散させる
+
+複数のページに分割する場合は、適当な`.qmd`ファイルを作成し、`_quart.yml`において、[ナビゲーションバー](https://quarto.org/docs/websites/website-navigation.html)に付け加えます。
+
+```yaml
+website:
+  ...
+  navbar:
+    left: 
+      - index.qmd
+      - ...
+  ...
+```
+
+- `left`や`right`で位置を決めます。
+- `menu`や`tools`で複数ページをまとめることができます。
+- ロゴなども設定できます。
+
+ページ上部ではなく、左側に[サイドバー](https://quarto.org/docs/websites/website-navigation.html#side-navigation)として表示させることも可能です。

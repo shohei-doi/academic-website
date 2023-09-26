@@ -8,6 +8,11 @@ website:
   navbar:
     left:
       - get-started.qmd
+      - basic.qmd
+      - multiple-contents.qmd
+      - theme.qmd
+      - advanced.qmd
+  page-footer: "Copyright 2023, Shohei Doi"
 
 format:
   html:

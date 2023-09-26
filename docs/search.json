@@ -25,7 +25,119 @@
     "href": "index.html#なぜquartoか",
     "title": "気楽にウェブサイトの作成・公開",
     "section": "なぜQuartoか？",
-    "text": "なぜQuartoか？\nウェブサイトを作成する手段として様々なものがあります。\n\nGoogleサイトやWix、WordPressなど\n\nPro: 無料、直感的に作成できる\nCon: （一般的に）いつまで無料か分からない、きれいに作るには手間がかかる、柔軟性に欠ける\n\nresearchmap\n\nPro: 無料、簡単に作成できる\nCon: かっこよくない（個人の感性）、柔軟性が皆無（特に教育向きではない）\n\nNotion\n\nPro: 基本的に無料、直感的に作成できる、即時に変更が反映される\nCon: 柔軟性に欠ける\n\nHTML/CSSを作成する\n\nPro: ほぼ自由に作れる、フレームワーク（Bootstrapなど）やテンプレートが豊富\nCon: 学習コストが高い（特にスクラッチの場合）\n\n\n\\(\\leadsto\\)無料で簡単にテキストベースで作成できるツールとしてQuartoを用います。\n\n直接、.htmlや.cssファイルを作成することなく、簡易なマークダウン記法（後述）を用いてウェブサイトを作成することができます。\nいつまで開発が続くか分かりませんが、.htmlなど必要なファイルは残るので、突然死することはないでしょう。\n\n\n\n\n\n\n\nR Markdownとの違い\n\n\n\n\n\n似たようなものとしてR Markdownというものがあります。似ていると言いますか、Quartoの姉／兄に当たると言えます。\n\nQuartoとR Markdownの類似点や相違点は公式のFAQや宋・矢内資料をご覧ください。\n\n今回、Quartoを使う理由は、R Markdownを使うにはR（そして事実上、RStudio）をインストールしなくてはいけないですが、ウェブサイトを作る上ではこれらは不要だからです。\nただ、QaurtoもR Markdownもマークダウン記法で書くという点では同じなため、例えばR Markdownをすでに使っている人はQuartoもほとんど同じように使えるので、安心してください"
+    "text": "なぜQuartoか？\nウェブサイトを作成する手段として様々なものがあります。\n\nGoogleサイトやWix、WordPressなど\n\nPro: 無料、直感的に作成できる\nCon: （一般的に）いつまで無料か分からない、きれいに作るには手間がかかる、柔軟性に欠ける\n\nresearchmap\n\nPro: 無料、簡単に作成できる\nCon: かっこよくない（個人の感性）、柔軟性が皆無（特に教育向きではない）\n\nNotion\n\nPro: 基本的に無料、直感的に作成できる、即時に変更が反映される\nCon: 柔軟性に欠ける\n\nHTML/CSSを作成する\n\nPro: ほぼ自由に作れる、フレームワーク（Bootstrapなど）やテンプレートが豊富\nCon: 学習コストが高い（特にスクラッチの場合）\n\n\n\\(\\leadsto\\)以下のメリットのため、Quartoを用います。\n\nマークダウン記法で簡単に作成できる（.htmlや.cssファイルを編集しなくてよい）\n作成された.htmlファイルがローカルに残る\n無料\nそれなりにかっこいい\n\n\n\n\n\n\n\nR Markdownとの違い\n\n\n\n\n\n似たようなものとしてR Markdownというものがあります。似ていると言いますか、Quartoの姉／兄に当たると言えます。\n\nQuartoとR Markdownの類似点や相違点は公式のFAQや宋・矢内資料をご覧ください。\n\n今回、Quartoを使う理由は、R Markdownを使うにはR（そして事実上、RStudio）をインストールしなくてはいけないですが、ウェブサイトを作る上ではこれらは不要だからです。\nただ、QaurtoもR Markdownもマークダウン記法で書くという点では同じなため、例えばR Markdownをすでに使っている人はQuartoもほとんど同じように使えるので、安心してください"
+  },
+  {
+    "objectID": "advanced.html",
+    "href": "advanced.html",
+    "title": "おまけ",
+    "section": "",
+    "text": "ウェブサイトに他のウェブサイトの内容を埋め込む場合はiframeを使います。\n例えば、Googleマップを埋め込む場合は、\n\n埋め込みたい地点を検索する\n「共有」の中の「地図を埋め込む」を選択する\n「HTMLをコピー」をクリックする\n.qmdファイルの地図を埋め込みたい箇所にペーストする\n\nことで可能です。\n&lt;iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.547346975242!2d141.341144612144!3d43.07198687101526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b292b3f74d0df%3A0x558704e495e959b3!2z5YyX5rW36YGT5aSn5a2mIOazleWtpumDqC_ms5XlrabnoJTnqbbnp5Ev5rOV56eR5aSn5a2m6Zmi!5e0!3m2!1sja!2sjp!4v1695710116627!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"&gt;&lt;/iframe&gt;"
+  },
+  {
+    "objectID": "advanced.html#iframe",
+    "href": "advanced.html#iframe",
+    "title": "おまけ",
+    "section": "",
+    "text": "ウェブサイトに他のウェブサイトの内容を埋め込む場合はiframeを使います。\n例えば、Googleマップを埋め込む場合は、\n\n埋め込みたい地点を検索する\n「共有」の中の「地図を埋め込む」を選択する\n「HTMLをコピー」をクリックする\n.qmdファイルの地図を埋め込みたい箇所にペーストする\n\nことで可能です。\n&lt;iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.547346975242!2d141.341144612144!3d43.07198687101526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b292b3f74d0df%3A0x558704e495e959b3!2z5YyX5rW36YGT5aSn5a2mIOazleWtpumDqC_ms5XlrabnoJTnqbbnp5Ev5rOV56eR5aSn5a2m6Zmi!5e0!3m2!1sja!2sjp!4v1695710116627!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"&gt;&lt;/iframe&gt;"
+  },
+  {
+    "objectID": "advanced.html#bootstrap",
+    "href": "advanced.html#bootstrap",
+    "title": "おまけ",
+    "section": "2 Bootstrap",
+    "text": "2 Bootstrap\n既に述べたようにQuartoはBootstrapをベースにウェブサイトを作成しています。そのため、Bootstrapの機能を使うことができます。\n\n主にComponentsのところから気になる機能を探します。\n基本的にHTMLの&lt;span&gt;タグと&lt;div&gt;タグで機能は提供されています。\n\nここでは、例としてバッジを使います。\n&lt;span class=\"badge bg-primary\"&gt;バッジ&lt;/span&gt;\nバッジ\nなお、&lt;span&gt;タグはマークダウンで次のように書くこともできます。\n[バッジ]{.badge .bg-primary}\nバッジ\nただし、上手く動作しないものもある（例えばカード）もあるので過度に期待しないでください。"
+  },
+  {
+    "objectID": "theme.html",
+    "href": "theme.html",
+    "title": "見た目を整える",
+    "section": "",
+    "text": "Quartoではテーマを変更することができます。Bootswatchから気になるテーマを選択して、_quarto.ymlに反映させましょう。\nformat:\n  html:\n    ...\n    theme: ...\n    ...\nナビゲーションバーの色を変更したい場合は_quarto.ymlを次のように書き換えます。\nwebsite:\n  ...\n  navbar:\n    background: ...\n  ...\n\nprimaryなどを入力します。"
+  },
+  {
+    "objectID": "theme.html#テーマ",
+    "href": "theme.html#テーマ",
+    "title": "見た目を整える",
+    "section": "",
+    "text": "Quartoではテーマを変更することができます。Bootswatchから気になるテーマを選択して、_quarto.ymlに反映させましょう。\nformat:\n  html:\n    ...\n    theme: ...\n    ...\nナビゲーションバーの色を変更したい場合は_quarto.ymlを次のように書き換えます。\nwebsite:\n  ...\n  navbar:\n    background: ...\n  ...\n\nprimaryなどを入力します。"
+  },
+  {
+    "objectID": "theme.html#フォント",
+    "href": "theme.html#フォント",
+    "title": "見た目を整える",
+    "section": "2 フォント",
+    "text": "2 フォント\nまた、フォントも変更できます。フォントを適切に設定しないと、厄介なことをが起こるときがあります。\nきれいなウェブサイトを作ることが主眼ではないので、“font-family おすすめ”で出てくるウェブサイトで適当なものをコピペしてしまいましょう（例えば、こちら）。\n_quarto.ymlを変更します。\nformat:\n  html:\n    ...\n    mainfont: \"Helvetica Neue\", Arial, \"Hiragino Kaku Gothic ProN\" \"Hiragino Sans\", \"BIZ UDPGothic\", Meiryo, sans-serif\n    ...\n\nfontsizeでフォントの大きさも変えられます。\n\nまた、ウェブサイトの言語を指定しないと適切なフォントが使用されない可能性があるので、lang属性を設定しておくとよいでしょう。\n\n例えば、日本語表示をする場合は_quarto.ymlの末尾に次のように追記します。\n\nlang: ja\n\n2.1 ウェブフォントの利用 (optional)\nどのようなデバイスでも同じフォントで表示したい！という場合はウェブフォントを使うのが一つの選択肢です。例えば、Noto Sans Japaneseを使おうとします。\n\nfont.htmlというファイルを作り、次のように記述します。\n\n&lt;link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"&gt;\n&lt;link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin&gt;\n&lt;link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap\" rel=\"stylesheet\"&gt;\n\n_quarto.ymlのhtml:の配下に次のように記述します。\n\nformat:\n  html:\n    ...\n1    include-in-header: font.html\n2    mainfont: Noto Sans JP, Helvetica Neue, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, BIZ UDPGothic, Meiryo, sans-serif\n    ...\n\n1\n\nfont.htmlの読み込み\n\n2\n\nフォントの追加"
+  },
+  {
+    "objectID": "theme.html#レイアウト-optional",
+    "href": "theme.html#レイアウト-optional",
+    "title": "見た目を整える",
+    "section": "3 レイアウト (optional)",
+    "text": "3 レイアウト (optional)\n\n3.1 幅の調整\n文字などを表示する幅を広げたい場合はレイアウトを変更します。\n\n\n3.2 グリッド\n複数の要素を横に並べたい場合はグリッドを指定します。\n\nQuartoはBootstrapというフレームワークを使用しているため、そのグリッド・システムを活用します。\n\n::: {.grid}\n\n::: {.g-col-4}\nThis column takes 1/3 of the page\n:::\n\n::: {.g-col-8}\nThis column takes 2/3 of the page\n:::\n\n:::\n\n\nThis column takes 1/3 of the page\n\n\nThis column takes 2/3 of the page\n\n\nポイントは合計して12になるようにそれぞれの要素の幅を指定します。\n\n上記の例では左側の幅が4なので、4/12=1/3となります。同様に、右は2/3になります。\n\n\n\n3.3 余白\n右の余白にコンテンツを表示させることができます。"
+  },
+  {
+    "objectID": "theme.html#色",
+    "href": "theme.html#色",
+    "title": "見た目を整える",
+    "section": "4 色",
+    "text": "4 色\n\n4.1 ナビゲーションバー\nナビゲーションバーの色を変える場合は、_quarto.ymlのnavbar:の設定を変えます。\n\nbackground：背景\nforeground：文字などの色\n\n色はテーマで設定されている色（“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”）やHEXカラーで設定できます。\n\n\n4.2 フォントや背景 (optional)\nフォントや背景の色も変更できます。\n\nfontcolor\nlinkcolor\nbackgroundcolor\n\nただし、ナビゲーションバーと異なり、テーマで設定されている色は使えません。\n\n\n4.3 カスタムCSS (optional)\nlinkcolorを変更してもマウスをホバーしたときの色は変更されないので、カスタムCSSで上書きする方がよいと思います。\nまず、custom.scss（.cssではない）を作成します。そして、その中で次のように記入します。\n/*-- scss:defaults --*/\n$primary: ...;\nここで、メインで使いたい色をHEXカラーで指定します。\n\n色はこのようなサイトから選んだり、スクールカラーを使ったり、気に入ったカラーパレットから使ったりすればよいでしょう。\n\n他に個別に色を指定したい要素がある場合は適当なSass変数を上書きします。"
+  },
+  {
+    "objectID": "theme.html#アクセシビリティ",
+    "href": "theme.html#アクセシビリティ",
+    "title": "見た目を整える",
+    "section": "5 アクセシビリティ",
+    "text": "5 アクセシビリティ\nウェブサイトやスライドは自分が見えているように他者にも見えているとは限りません。\n\nカラー・ユニバーサル・デザインを意識しましょう。\n\n他の人にはどのように見えるのかを確認しましょう。\n\nFirefoxではMore toolsのWeb Developer Toolsを開き、AccessibilityのSimulateで見え方を選択します。\nChromeやEdgeではMore toolsのRenderingのEmulate vision deficienciesで見え方を選択します。"
+  },
+  {
+    "objectID": "basic.html",
+    "href": "basic.html",
+    "title": "作ってみる",
+    "section": "",
+    "text": "それでは、実際に自分のウェブサイトを構築していきましょう。\n一般的に、ウェブサイトではindex.htmlが最初に表示されるページになります。したがって、index.qmdを編集していきます。"
+  },
+  {
+    "objectID": "basic.html#about-pages",
+    "href": "basic.html#about-pages",
+    "title": "作ってみる",
+    "section": "1 About Pages",
+    "text": "1 About Pages\nQuartoのウェブサイトではAbout Pagesが、自己紹介用には良い感じのレイアウトを提供しています。\nindex.qmdの冒頭に---で囲まれた箇所があります。これをyamlヘッダーと呼びます。ページの設定を書く場所になります。まずは、titleを自分の名前にしましょう。\ntitle: \"Your Name\"\n\n\n\n\n\n\nウェブサイトの設定\n\n\n\nQuartoではウェブサイトの設定を記述する箇所が2つあります。\n\n_quarto.yml：ウェブサイト全体の設定\n.qmdファイルのyamlヘッダー：特定のページの設定\n\n\n\nさらに、About Pageであることを明示します。\ntitle: \"Your Name\"\nabout:\n1template: ...\n\n1\n\n5つあるテンプレートから好みのものを設定します。\n\n\n\n1.1 画像 (optional)\nもし、画像を載せる場合は、次のようにyamlヘッダーに書き加えます。\ntitle: \"Your Name\"\n1image: path/to/image\nabout:\n  template: ...\n\n1\n\n例えば、ウェサイトのフォルダの中にfiguresというフォルダを作成し、そこにprofile.jpgという画像を保存している場合はfigures/profile.jpgと書きます。\n\n\n\n画像の大きさや形状などを変更できます。\n\n\n\n1.2 リンクボタン (optional)\n名前の下にメールアドレスやSNSなどリンクを貼りたい場合は、yamlヘッダーを次のように編集します。リンクは複数設定できます。\n\nハイフン=の有無に注意してください。\n\ntitle: \"Your Name\"\nimage: path/to/image\nabout:\n  template: ...\n  links:\n1    - icon: ...\n2      text: ...\n3      href: ...\n\n1\n\niconはBootstrap Iconsがデフォルトで利用できます。適当に検索して気に入ったアイコンの名前を入れます。例えばmailで検索するとenvelopeというアイコンがあるので、envelopeと入力します。\n\n2\n\ntextはその名の通り表示する文字列を入力します。iconやtextはどちらか一方でも問題ありません。\n\n3\n\nhrefはリンク先を入力します。メールアドレスの場合はmailto:をメールアドレスの前に付けます。例えば、mailto:sdoi@juris.hokudai.ac.jpなど。\n\n\nところで、デフォルトでは同じタブでリンク先のページに移動します。リンク先のページを新しいタブで表示したい場合は_quarto.ymlを変更します。\nformat:\n  html:\n    ...\n1    link-external-newwindow: true\n    ...\n\n1\n\nこのように変更します。\n\n\n気に入ったテンプレートがない場合（特に画像が不要な場合）はAbout Pageを使わなくてよいでしょう。"
+  },
+  {
+    "objectID": "basic.html#マークダウン",
+    "href": "basic.html#マークダウン",
+    "title": "作ってみる",
+    "section": "2 マークダウン",
+    "text": "2 マークダウン\nそれでは、いよいよ自分紹介を書いていきます。Quartoではマークダウン記法によって見た目や機能を変更することができます。\n以下では、ウェブサイト作成において使用する頻度の多いと思われるものを取り上げます。\n\n2.1 見出し\nもし、見出しで区切りたい場合は#を使います。#が増えていくと、より細かいレベルの見出しになります。\n\nQuartoでは##から始めることが多いように思います。\nHTMLにおけるh1などに対応しています。\n\n\n\n2.2 箇条書き\n箇条書きをする場合、順番がない場合は*や-などの記号を、順番がある場合は1.のように半角数字とピリオドを使います。\n\n全てを1.にしても自動で数字が割り振られます。\n\n箇条書きをネストする場合はインデントを入れます。\n\n\n2.3 リンク\nリンクを貼る場合、URLをそのまま表示する場合は&lt;URL&gt;とし、リンク先を直接表示しない場合は[表示されるテキスト](URL)と書きます。\n\n\n2.4 画像\n画像を挿入する場合は![キャプション](path/to/image)と書きます。\n\n\n2.5 コールアウト・ブロック\nコールアウト・ブロックを表示させることもできます。\n:::{.callout-...}\n## タイトル\n\nブロックの内容\n:::\n\n\n\n\n\n\nタイトル\n\n\n\nブロックの内容\n\n\n\ncallout-...の...で種類を決めます。\nブロックにタイトルをつける場合は、ブロック内で##とするか、チャンクオプションで{.callout-... title = \"...\"}とします。\nブロックの見た目を変える場合は、_quarto.ymlでcallout-appearance:...とするか、チャンクオプションで{.callout-... appearance = \"...\"}とします。\nブロックをタイトルだけ表示させ、クリックした時に内容が見えるようにするには、チャンクオプションで{.callout-... collapse=true}とします。\n\n\n\n2.6 強調\n強調や打ち消しなど文字列を修飾することができます。\n\n強調：**テキスト**\n\n\n\n2.7 タブセット\nタブセットを使うことで、限られたスペースに複数の情報を載せることができます。\n::: {.panel-tabset}\n## タイトル1\n\n1つ目の（最初に表示されている）タブの内容\n\n## タイトル2\n\n2つ目のタブの内容\n\n:::\n\nタイトル1タイトル2\n\n\n1つ目の（最初に表示されている）タブの内容\n\n\n2つ目のタブの内容\n\n\n\n\n\n2.8 脚注 (optional)\n脚注をつける場合は2通りのやり方があります。\n\n^[脚注の内容]\n[^1]で脚注の挿入記号、[^1]: 脚注の内容\n\n脚注を右の余白に表示したい場合は、_quarto.ymlに次のように書きます。\nformat:\n  html:\n    ...\n    reference-location: margin\n    ...\n\n\n2.9 表 (optional)\n表を挿入する場合もテキストで入力します。\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|   12  |  12  |    12   |    12  |\n|  123  |  123 |   123   |   123  |\n|    1  |    1 |     1   |     1  |\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\nこのようなツールを使うと楽かもしれません。"
+  },
+  {
+    "objectID": "basic.html#フッター",
+    "href": "basic.html#フッター",
+    "title": "作ってみる",
+    "section": "3 フッター",
+    "text": "3 フッター\nフッターを作成する場合は_quarto.ymlのwebsite:配下で設定します\nwebsite:\n  title: \"気楽にウェブサイト\"\n  ...\n  page-footer: \"...\"\n  ..."
+  },
+  {
+    "objectID": "multiple-contents.html",
+    "href": "multiple-contents.html",
+    "title": "内容を増やす",
+    "section": "",
+    "text": "About Pagesのレイアウトは多くの情報を載せるには適切ではありません。簡単な自己紹介以外の情報（例えば経歴や研究業績、授業に関する案内など）も載せる場合には次の2つの選択肢（あるいは両方）があります。"
+  },
+  {
+    "objectID": "multiple-contents.html#つのページにまとめる",
+    "href": "multiple-contents.html#つのページにまとめる",
+    "title": "内容を増やす",
+    "section": "1 1つのページにまとめる",
+    "text": "1 1つのページにまとめる\n1つのページに情報をまとめる場合は、index.qmdの一部だけをAbout Pageのレイアウトにします。\n具体的には、ymalヘッダーに次のような項目を追記し、\nabout: \n  ...\n  id: heading\n  ...\n本文で、About Pageレイアウトにするところだけを、次のように囲みます。\n:::{#heading}\n\nAbout Pageのレイアウト\n\n:::\n\n通常のレイアウト\nこの場合、_quarto.ymlのleft:セクションを削除します。\nwebsite:\n  ...\n  navbar:\n1    background: primary\n  ...\n\n1\n\nnavbar:に設定が入っていないとエラーが出るので、適当に（デフォルトの）設定を書いておきます。\n\n\nナビゲーションバー自体が不要であればnavbar:セクションを削除します。\n\n1.1 目次\nもし、目次を付けたい場合は_quarto.ymlに次のように書きます。\nformat:\n  html:\n    ...\n    toc: true\n1    toc-title: \" \"\n\n1\n\n目次のタイトルを消したい場合は空白を入れておきます。"
+  },
+  {
+    "objectID": "multiple-contents.html#複数のページに分散させる",
+    "href": "multiple-contents.html#複数のページに分散させる",
+    "title": "内容を増やす",
+    "section": "2 複数のページに分散させる",
+    "text": "2 複数のページに分散させる\n複数のページに分割する場合は、適当な.qmdファイルを作成し、_quart.ymlにおいて、ナビゲーションバーに付け加えます。\nwebsite:\n  ...\n  navbar:\n    left: \n      - index.qmd\n      - ...\n  ...\n\nleftやrightで位置を決めます。\nmenuやtoolsで複数ページをまとめることができます。\nロゴなども設定できます。\n\nページ上部ではなく、左側にサイドバーとして表示させることも可能です。"
   },
   {
     "objectID": "get-started.html",
@@ -39,20 +151,20 @@
     "href": "get-started.html#ウェブサイト公開の準備",
     "title": "セットアップ",
     "section": "1 ウェブサイト公開の準備",
-    "text": "1 ウェブサイト公開の準備\nウェブサイトを公開する準備から始めたいと思います。今回はGitHub Pagesというサービスを使って、無料で公開します。\n\n1.1 Visual Studio Code\nウェブサイトを作成するために使用するVisual Studio Code (VS code) をインストールします。\n\n普段、RStudioを使用している人はそちらを使っても構いません。\n\n\n\n\n\n\n\n初期設定の変更\n\n\n\n\n\n左下の設定ボタンをクリックし、Themesから好みのテーマを選んでください。\nSettingsを適当に変更します。\n\nEditor: Word Wrapをonにします。\nEditor: Font Sizeを見やすい大きさにします。\n\n\n\n\n\n\n1.2 Git\nGitHubでウェブサイトを公開するために、OSに合わせてGitをインストールします。\n\nインストール方法はいろいろあるようなので、調べてください。\nVS codeをデフォルトに設定しておきましょう。\nユーザーネームとメールアドレスの登録まで行ってください。\n\ngit config --global user.name \"ユーザー名\"\ngit config --global user.email \"メールアドレス\"\n\n\n1.3 GitHub\nGitHubでアカウントを作成します。アカウント名はウェブサイトのURLになるので、それを念頭に置いて決めてください。\nGitHubのリポジトリを作成します。GitHub Pagesでウェブサイトを公開するためには、&lt;username&gt;.github.ioという名前のリポジトリを作成する必要があります。\n\n例えば、GitHubアカウント名がshohe-doiであれば、shohei-doi.github.ioというリポジトリ名にします。また、URLはhttps://shohei-doi.github.io/となります。\n\n\n\n1.4 VS codeとGitHubの連携\n\nSource Control（二股に分かれているひもみたいなボタン）からClone Repositoryをクリックします。\nClone from GitHubをクリックし、GitHubと連携し、先ほど作成したリポジトリを選択します。\nEnterを押して、ウェブサイト用のフォルダを保存したいフォルダを選択します。\n\n例えば、Documentというフォルダを選択すると、その中に&lt;username&gt;.github.ioというフォルダが作成されます。\n\n\n\n1.5 Quarto\n自分のOSに合ったQuartoをインストールします。\nまた、VS CodeのExtentionsを押して、拡張機能としてのQuartoをインストールします。\nウェブサイトの雛形を作成します。\n\nCtrl-Shift-Pを押して、quartoと入力します。\nCreate Projectを選択します。\nWebsite Projectを選択します。\n作成したフォルダ&lt;username&gt;.github.ioを選択します。\n/を入力してEnterを押します。\n\nうまくいっていると、index.qmdをはじめとするファイルが作成されています。\n_quarto.ymlというファイルを開きます。\n\nこのファイルはウェブサイト全体の設定を記述するものです。\n\nproject:\n  type: website\n1  output-dir: docs\n\n1\n\nこの行を追記します。\n\n\n\nyamlではインデントが重要になるので、間違えないでください。\n後にGitHubで公開する際のおまじないです。"
+    "text": "1 ウェブサイト公開の準備\nウェブサイトを公開する準備から始めたいと思います。今回はGitHub Pagesというサービスを使って、無料で公開します。\n\n1.1 Visual Studio Code\nウェブサイトを作成するために使用するVisual Studio Code (VS code) をインストールします。\n\n普段、RStudioを使用している人はそちらを使っても構いません。\n\n\n\n\n\n\n\n初期設定の変更\n\n\n\n\n\n左下の設定ボタンをクリックし、Themesから好みのテーマを選んでください。\nSettingsを適当に変更します。\n\nEditor: Word Wrapをonにします。\nEditor: Font Sizeを見やすい大きさにします。\n\n\n\n\n\n\n1.2 Git\nGitHubでウェブサイトを公開するために、OSに合わせてGitをインストールします。\n\nインストール方法はいろいろあるようなので、調べてください。\nVS codeをデフォルトに設定しておきましょう。\nユーザーネームとメールアドレスの登録まで行ってください。\n\ngit config --global user.name \"ユーザー名\"\ngit config --global user.email \"メールアドレス\"\n\n\n1.3 GitHub\nGitHubでアカウントを作成します。アカウント名はウェブサイトのURLになるので、それを念頭に置いて決めてください。\nGitHubのリポジトリを作成します。GitHub Pagesでウェブサイトを公開するためには、&lt;username&gt;.github.ioという名前のリポジトリを作成する必要があります。\n\n例えば、GitHubアカウント名がshohe-doiであれば、shohei-doi.github.ioというリポジトリ名にします。また、URLはhttps://shohei-doi.github.io/となります。\n\n\n\n1.4 VS codeとGitHubの連携\n\nSource Control（二股に分かれているひもみたいなボタン）からClone Repositoryをクリックします。\nClone from GitHubをクリックし、GitHubと連携し、先ほど作成したリポジトリを選択します。\nEnterを押して、ウェブサイト用のフォルダを保存したいフォルダを選択します。\n\n例えば、Documentというフォルダを選択すると、その中に&lt;username&gt;.github.ioというフォルダが作成されます。\n\n\n\n1.5 Quarto\n自分のOSに合ったQuartoをインストールします。\nまた、VS CodeのExtentionsを押して、拡張機能としてのQuartoをインストールします。\nウェブサイトの雛形を作成します。\n\nCtrl-Shift-Pを押して、quartoと入力します。\nCreate Projectを選択します。\nWebsite Projectを選択します。\n作成したフォルダ&lt;username&gt;.github.ioを選択します。\n/を入力してEnterを押します。\n\nうまくいっていると、index.qmdをはじめとするファイルが作成されています。\n_quarto.ymlというファイルを開きます。\n\nこのyamlファイルはウェブサイト全体の設定を記述するものです。\n\nproject:\n  type: website\n1  output-dir: docs\n\n1\n\nこの行を追記します。後にGitHubで公開する際のおまじないです。\n\n\n\n\n\n\n\n\nyamlの注意点\n\n\n\n_quarto.ymlや後述するyamlヘッダーでは、インデントとコロンのあとのスペースが重要です。これらを間違えると上手く動かないので気をつけてください。"
   },
   {
     "objectID": "get-started.html#ウェブサイトの作成",
     "href": "get-started.html#ウェブサイトの作成",
     "title": "セットアップ",
     "section": "2 ウェブサイトの作成",
-    "text": "2 ウェブサイトの作成\nindex.qmdファイルを開き、右上のRenderというボタンをクリックします。\n\nindex.qmdは一番最初に表示されるウェブサイトです。\n\n\\(\\leadsto\\)うまく行けば、右側に生成されたウェブサイトが表示されます。\n\n2.1 Google Analytics (optional)\nGoogle Analyticsとはウェブサイトへのアクセスなどを解析するサービスです。\n\nGoogle Analyticsのアカウントを作成します。\nプロパティを作成します。\n\n設定は適当で構いません。\n\nプラットフォームでウェブを選択します。\n\nURLはhttps://&lt;username&gt;.github.ioに、ストリーム名は適当に決めます。\n\n測定IDをコピーし、_quarto.ymlを開きます。\n\nwebsite:\n  title: \"...\"\n1  google-analytics: \"G-...\"\n\n1\n\nこの行を追記します。\n\n\nそのうち、測定が開始されます。\n\nresearchmapも測定できます。"
+    "text": "2 ウェブサイトの作成\nabout.qmdとstyles.cssというファイルを削除します。また、_quarto.ymlからも削除します。\nwebsite:\n  title: \"...\"\n  navbar:\n    left:\n      - index.qmd\n1      - about.qmd\n\n1\n\nこれを削除する。\n\n\nindex.qmdファイルを開き、右上のRenderというボタンをクリックします。\n\nindex.qmdは一番最初に表示されるウェブサイトです。\n\n\\(\\leadsto\\)うまく行けば、右側に生成されたウェブサイトが表示されます。\n\n2.1 Google Analytics (optional)\nGoogle Analyticsとはウェブサイトへのアクセスなどを解析するサービスです。\n\nGoogle Analyticsのアカウントを作成します。\nプロパティを作成します。\n\n設定は適当で構いません。\n\nプラットフォームでウェブを選択します。\n\nURLはhttps://&lt;username&gt;.github.ioに、ストリーム名は適当に決めます。\n\n測定IDをコピーし、_quarto.ymlを開きます。\n\nwebsite:\n  title: \"...\"\n1  google-analytics: \"G-...\"\n\n1\n\nこの行を追記します。\n\n\nそのうち、測定が開始されます。\n\nresearchmapも測定できます。"
   },
   {
     "objectID": "get-started.html#ウェブサイトの公開",
     "href": "get-started.html#ウェブサイトの公開",
     "title": "セットアップ",
     "section": "3 ウェブサイトの公開",
-    "text": "3 ウェブサイトの公開\n以降、ファイルを修正するたびにSource Controlをクリックして、次の作業を行います。\n\nChangesの横の+ボタンをクリックして、変更を”add”します。\n上部のMessageに変更内容を簡単に記載し（半角英数字）、Commitをクリックします。\n\n\\(\\leadsto\\)これにより、変更内容がリポジトリに記録されます。\nウェブサイトを公開する場合は、pushを行います（次回からSync Changesというボタンでも可能）。\n\n初回はGitHubとの連携の許可を求められるかもしれません。\n\n最後に、GitHubでリポジトリのページに飛び、SettingsのPagesでBranchをmasterのdocsに設定します。\n少し、時間が経つとYour site is live at...と表示されますので、公開されたウェブサイトにアクセスします。\n\n最初の一回だけでOK。\nhttps://&lt;username&gt;.github.ioでもアクセスできることを確認しましょう。\n\n\n3.1 次回以降の手順\n今後は、VS Codeで\n\n.qmdファイルを編集\nRenderでウェブサイトを作成\nadd & commitで変更を保存\npushで公開\n\nという手順になります。"
+    "text": "3 ウェブサイトの公開\n以降、ファイルを修正するたびにSource Controlをクリックして、次の作業を行います。\n\nChangesの横の+ボタンをクリックして、変更を”add”します。\n上部のMessageに変更内容を簡単に記載し（半角英数字）、Commitをクリックします。\n\n\\(\\leadsto\\)これにより、変更内容がリポジトリに記録されます。\nウェブサイトを公開する場合は、pushを行います（次回からSync Changesというボタンでも可能）。\n\n初回はGitHubとの連携の許可を求められるかもしれません。\n\n最後に、GitHubでリポジトリのページに飛び、SettingsのPagesでBranchをmasterのdocsに設定します。\n少し、時間が経つとYour site is live at...と表示されますので、公開されたウェブサイトにアクセスします。\n\n最初の一回だけでOK。\nhttps://&lt;username&gt;.github.ioでもアクセスできることを確認しましょう。\n\n\n3.1 次回以降の手順\n今後は、VS Codeで\n\n.qmdファイルを編集\nReloadで変更を確認\nRenderで.qmdファイルからウェブサイトを作成\nadd & commitで変更を保存\npushで公開\n\nという手順になります。"
   }
 ]

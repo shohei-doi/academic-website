@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="土井翔平">
 
-<title>気楽にウェブサイト - 気楽にウェブサイトの作成・公開</title>
+<title>気楽にウェブサイト - おまけ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,8 +105,6 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&amp;display=swap" rel="stylesheet">
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -111,7 +142,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
  <span class="menu-text">見た目を整える</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./advanced.html" rel="" target="">
+    <a class="nav-link active" href="./advanced.html" rel="" target="" aria-current="page">
  <span class="menu-text">おまけ</span></a>
   </li>  
 </ul>
@@ -129,9 +160,8 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
         <nav id="TOC" role="doc-toc" class="toc-active">
    
   <ul>
-  <li><a href="#はじめに" id="toc-はじめに" class="nav-link active" data-scroll-target="#はじめに">はじめに</a></li>
-  <li><a href="#quartoとは" id="toc-quartoとは" class="nav-link" data-scroll-target="#quartoとは">Quartoとは？</a></li>
-  <li><a href="#なぜquartoか" id="toc-なぜquartoか" class="nav-link" data-scroll-target="#なぜquartoか">なぜQuartoか？</a></li>
+  <li><a href="#iframe" id="toc-iframe" class="nav-link active" data-scroll-target="#iframe"><span class="header-section-number">1</span> iframe</a></li>
+  <li><a href="#bootstrap" id="toc-bootstrap" class="nav-link" data-scroll-target="#bootstrap"><span class="header-section-number">2</span> Bootstrap</a></li>
   </ul>
 </nav>
     </div>
@@ -140,26 +170,14 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">気楽にウェブサイトの作成・公開</h1>
+<h1 class="title">おまけ</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">作者</div>
-    <div class="quarto-title-meta-contents">
-             <p><a href="https://shohei-doi.github.io/">土井翔平</a> </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">公開</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2023年9月26日</p>
-    </div>
-  </div>
   
     
   </div>
@@ -167,71 +185,35 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 
 </header>
 
-<section id="はじめに" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="はじめに">はじめに</h2>
-<p>このウェブサイトは、主として研究者を対象に気楽に簡易なウェブサイトを作成し、公開する方法を解説します。</p>
-<ul>
-<li><a href="https://quarto.org/">Quarto</a>というアプリケーションを用いることで、HTMLやCSSなどの知識なしにウェブサイトを作成します。</li>
-<li><a href="https://docs.github.com/ja/pages">GitHub Pages</a>によって無料でウェブサイトを公開します。</li>
-</ul>
-</section>
-<section id="quartoとは" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="quartoとは">Quartoとは？</h2>
-<p>Quartoは<code>.qmd</code>ファイルから（RやPythonなどのファイルを作成し）<a href="https://pandoc.org/">pandoc</a>によって<code>.html</code>や<code>.pdf</code>ファイルを作成します。</p>
-</section>
-<section id="なぜquartoか" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="なぜquartoか">なぜQuartoか？</h2>
-<p>ウェブサイトを作成する手段として様々なものがあります。</p>
-<ul>
-<li><a href="https://support.google.com/sites/answer/6372878?hl=ja">Googleサイト</a>や<a href="https://ja.wix.com/">Wix</a>、<a href="https://ja.wordpress.org/">WordPress</a>など
-<ul>
-<li>Pro: 無料、直感的に作成できる</li>
-<li>Con: （一般的に）いつまで無料か分からない、きれいに作るには手間がかかる、柔軟性に欠ける</li>
-</ul></li>
-<li><a href="https://researchmap.jp/">researchmap</a>
-<ul>
-<li>Pro: 無料、簡単に作成できる</li>
-<li>Con: かっこよくない（個人の感性）、柔軟性が皆無（特に教育向きではない）</li>
-</ul></li>
-<li><a href="https://www.notion.so">Notion</a>
-<ul>
-<li>Pro: 基本的に無料、直感的に作成できる、即時に変更が反映される</li>
-<li>Con: 柔軟性に欠ける</li>
-</ul></li>
-<li>HTML/CSSを作成する
-<ul>
-<li>Pro: ほぼ自由に作れる、フレームワーク（<a href="https://getbootstrap.jp/">Bootstrap</a>など）やテンプレートが豊富</li>
-<li>Con: 学習コストが高い（特にスクラッチの場合）</li>
-</ul></li>
-</ul>
-<p><span class="math inline">\(\leadsto\)</span>以下のメリットのため、Quartoを用います。</p>
+<section id="iframe" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="iframe"><span class="header-section-number">1</span> iframe</h2>
+<p>ウェブサイトに他のウェブサイトの内容を埋め込む場合はiframeを使います。</p>
+<p>例えば、<a href="https://www.google.co.jp/maps">Googleマップ</a>を埋め込む場合は、</p>
 <ol type="1">
-<li>マークダウン記法で簡単に作成できる（<code>.html</code>や<code>.css</code>ファイルを編集しなくてよい）</li>
-<li>作成された<code>.html</code>ファイルがローカルに残る</li>
-<li>無料</li>
-<li>それなりにかっこいい</li>
+<li>埋め込みたい地点を検索する</li>
+<li>「共有」の中の「地図を埋め込む」を選択する</li>
+<li>「HTMLをコピー」をクリックする</li>
+<li><code>.qmd</code>ファイルの地図を埋め込みたい箇所にペーストする</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-R Markdownとの違い
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>似たようなものとして<a href="https://rmarkdown.rstudio.com/">R Markdown</a>というものがあります。似ていると言いますか、Quartoの姉／兄に当たると言えます。</p>
+<p>ことで可能です。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;iframe</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.547346975242!2d141.341144612144!3d43.07198687101526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b292b3f74d0df%3A0x558704e495e959b3!2z5YyX5rW36YGT5aSn5a2mIOazleWtpumDqC_ms5XlrabnoJTnqbbnp5Ev5rOV56eR5aSn5a2m6Zmi!5e0!3m2!1sja!2sjp!4v1695710116627!5m2!1sja!2sjp"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"600"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"450"</span> <span class="er">style</span><span class="ot">=</span><span class="st">"border:0;"</span> <span class="er">allowfullscreen</span><span class="ot">=</span><span class="st">""</span> <span class="er">loading</span><span class="ot">=</span><span class="st">"lazy"</span> <span class="er">referrerpolicy</span><span class="ot">=</span><span class="st">"no-referrer-when-downgrade"</span><span class="kw">&gt;&lt;/iframe&gt;</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.547346975242!2d141.341144612144!3d43.07198687101526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b292b3f74d0df%3A0x558704e495e959b3!2z5YyX5rW36YGT5aSn5a2mIOazleWtpumDqC_ms5XlrabnoJTnqbbnp5Ev5rOV56eR5aSn5a2m6Zmi!5e0!3m2!1sja!2sjp!4v1695710116627!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</section>
+<section id="bootstrap" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="bootstrap"><span class="header-section-number">2</span> Bootstrap</h2>
+<p>既に述べたようにQuartoはBootstrapをベースにウェブサイトを作成しています。そのため、<a href="https://getbootstrap.jp/docs/5.3/getting-started/introduction/">Bootstrapの機能</a>を使うことができます。</p>
 <ul>
-<li>QuartoとR Markdownの類似点や相違点は<a href="https://quarto.org/docs/faq/rmarkdown.html">公式のFAQ</a>や<a href="https://www.jaysong.net/RBook/quarto.html">宋・矢内資料</a>をご覧ください。</li>
+<li>主にComponentsのところから気になる機能を探します。</li>
+<li>基本的にHTMLの<code>&lt;span&gt;</code>タグと<code>&lt;div&gt;</code>タグで機能は提供されています。</li>
 </ul>
-<p>今回、Quartoを使う理由は、R Markdownを使うにはR（そして事実上、RStudio）をインストールしなくてはいけないですが、ウェブサイトを作る上ではこれらは不要だからです。</p>
-<p>ただ、QaurtoもR Markdownもマークダウン記法で書くという点では同じなため、例えばR Markdownをすでに使っている人はQuartoもほとんど同じように使えるので、安心してください</p>
-</div>
-</div>
-</div>
+<p>ここでは、例として<a href="https://getbootstrap.jp/docs/5.3/components/badge/">バッジ</a>を使います。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"badge bg-primary"</span><span class="kw">&gt;</span>バッジ<span class="kw">&lt;/span&gt;</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="badge bg-primary">バッジ</span></p>
+<p>なお、<a href="primary"><code>&lt;span&gt;</code>タグ</a>はマークダウンで次のように書くこともできます。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">バッジ</span><span class="co">]</span>{.badge .bg-primary}</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="badge bg-primary">バッジ</span></p>
+<p>ただし、上手く動作しないものもある（例えばカード）もあるので過度に期待しないでください。</p>
 
 
 </section>

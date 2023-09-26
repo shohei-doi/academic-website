@@ -1,0 +1,47 @@
+---
+title: "おまけ"
+---
+
+## iframe
+
+ウェブサイトに他のウェブサイトの内容を埋め込む場合はiframeを使います。
+
+例えば、[Googleマップ](https://www.google.co.jp/maps)を埋め込む場合は、
+
+1. 埋め込みたい地点を検索する
+1. 「共有」の中の「地図を埋め込む」を選択する
+1. 「HTMLをコピー」をクリックする
+1. `.qmd`ファイルの地図を埋め込みたい箇所にペーストする
+
+ことで可能です。
+
+```html
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.547346975242!2d141.341144612144!3d43.07198687101526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b292b3f74d0df%3A0x558704e495e959b3!2z5YyX5rW36YGT5aSn5a2mIOazleWtpumDqC_ms5XlrabnoJTnqbbnp5Ev5rOV56eR5aSn5a2m6Zmi!5e0!3m2!1sja!2sjp!4v1695710116627!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+```
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.547346975242!2d141.341144612144!3d43.07198687101526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b292b3f74d0df%3A0x558704e495e959b3!2z5YyX5rW36YGT5aSn5a2mIOazleWtpumDqC_ms5XlrabnoJTnqbbnp5Ev5rOV56eR5aSn5a2m6Zmi!5e0!3m2!1sja!2sjp!4v1695710116627!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+## Bootstrap
+
+既に述べたようにQuartoはBootstrapをベースにウェブサイトを作成しています。そのため、[Bootstrapの機能](https://getbootstrap.jp/docs/5.3/getting-started/introduction/)を使うことができます。
+
+- 主にComponentsのところから気になる機能を探します。
+- 基本的にHTMLの`<span>`タグと`<div>`タグで機能は提供されています。
+
+ここでは、例として[バッジ](https://getbootstrap.jp/docs/5.3/components/badge/)を使います。
+
+```html
+<span class="badge bg-primary">バッジ</span>
+```
+
+<span class="badge bg-primary">バッジ</span>
+
+なお、[`<span>`タグ](primary)はマークダウンで次のように書くこともできます。
+
+```md
+[バッジ]{.badge .bg-primary}
+```
+
+[バッジ]{.badge .bg-primary}
+
+ただし、上手く動作しないものもある（例えばカード）もあるので過度に期待しないでください。

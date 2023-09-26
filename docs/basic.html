@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.290">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>気楽にウェブサイト - 作ってみる</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "一致なし",
+    "search-matching-documents-text": "一致した文書",
+    "search-copy-link-title": "検索へのリンクをコピー",
+    "search-hide-matches-text": "追加の検索結果を非表示",
+    "search-more-match-text": "追加の検索結果",
+    "search-more-matches-text": "追加の検索結果",
+    "search-clear-button-title": "消去",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "検索"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LLFB8XFPX5"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&amp;display=swap" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">気楽にウェブサイト</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="サーチ"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="ナビゲーションを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./get-started.html" rel="" target="">
+ <span class="menu-text">セットアップ</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./basic.html" rel="" target="" aria-current="page">
+ <span class="menu-text">作ってみる</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./multiple-contents.html" rel="" target="">
+ <span class="menu-text">内容を増やす</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./theme.html" rel="" target="">
+ <span class="menu-text">見た目を整える</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./advanced.html" rel="" target="">
+ <span class="menu-text">おまけ</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+   
+  <ul>
+  <li><a href="#about-pages" id="toc-about-pages" class="nav-link active" data-scroll-target="#about-pages"><span class="header-section-number">1</span> About Pages</a>
+  <ul class="collapse">
+  <li><a href="#画像-optional" id="toc-画像-optional" class="nav-link" data-scroll-target="#画像-optional"><span class="header-section-number">1.1</span> 画像 (optional)</a></li>
+  <li><a href="#リンクボタン-optional" id="toc-リンクボタン-optional" class="nav-link" data-scroll-target="#リンクボタン-optional"><span class="header-section-number">1.2</span> リンクボタン (optional)</a></li>
+  </ul></li>
+  <li><a href="#マークダウン" id="toc-マークダウン" class="nav-link" data-scroll-target="#マークダウン"><span class="header-section-number">2</span> マークダウン</a>
+  <ul class="collapse">
+  <li><a href="#見出し" id="toc-見出し" class="nav-link" data-scroll-target="#見出し"><span class="header-section-number">2.1</span> 見出し</a></li>
+  <li><a href="#箇条書き" id="toc-箇条書き" class="nav-link" data-scroll-target="#箇条書き"><span class="header-section-number">2.2</span> 箇条書き</a></li>
+  <li><a href="#リンク" id="toc-リンク" class="nav-link" data-scroll-target="#リンク"><span class="header-section-number">2.3</span> リンク</a></li>
+  <li><a href="#画像" id="toc-画像" class="nav-link" data-scroll-target="#画像"><span class="header-section-number">2.4</span> 画像</a></li>
+  <li><a href="#コールアウトブロック" id="toc-コールアウトブロック" class="nav-link" data-scroll-target="#コールアウトブロック"><span class="header-section-number">2.5</span> コールアウト・ブロック</a></li>
+  <li><a href="#強調" id="toc-強調" class="nav-link" data-scroll-target="#強調"><span class="header-section-number">2.6</span> 強調</a></li>
+  <li><a href="#タブセット" id="toc-タブセット" class="nav-link" data-scroll-target="#タブセット"><span class="header-section-number">2.7</span> タブセット</a></li>
+  <li><a href="#脚注-optional" id="toc-脚注-optional" class="nav-link" data-scroll-target="#脚注-optional"><span class="header-section-number">2.8</span> 脚注 (optional)</a></li>
+  <li><a href="#表-optional" id="toc-表-optional" class="nav-link" data-scroll-target="#表-optional"><span class="header-section-number">2.9</span> 表 (optional)</a></li>
+  </ul></li>
+  <li><a href="#フッター" id="toc-フッター" class="nav-link" data-scroll-target="#フッター"><span class="header-section-number">3</span> フッター</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">作ってみる</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>それでは、実際に自分のウェブサイトを構築していきましょう。</p>
+<p>一般的に、ウェブサイトでは<code>index.html</code>が最初に表示されるページになります。したがって、<code>index.qmd</code>を編集していきます。</p>
+<section id="about-pages" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="about-pages"><span class="header-section-number">1</span> About Pages</h2>
+<p>Quartoのウェブサイトでは<a href="https://quarto.org/docs/websites/website-about.html">About Pages</a>が、自己紹介用には良い感じのレイアウトを提供しています。</p>
+<p><code>index.qmd</code>の冒頭に<code>---</code>で囲まれた箇所があります。これを<strong>yamlヘッダー</strong>と呼びます。ページの設定を書く場所になります。まずは、<code>title</code>を自分の名前にしましょう。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ウェブサイトの設定
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quartoではウェブサイトの設定を記述する箇所が2つあります。</p>
+<ol type="1">
+<li><code>_quarto.yml</code>：ウェブサイト全体の設定</li>
+<li><code>.qmd</code>ファイルのyamlヘッダー：特定のページの設定</li>
+</ol>
+</div>
+</div>
+<p>さらに、About Pageであることを明示します。</p>
+<div class="sourceCode" id="annotated-cell-2"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">about</span><span class="kw">:</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-2-3" class="code-annotation-target"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span><span class="at"> ...</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-lines="3" data-code-cell="annotated-cell-2" data-code-annotation="1">5つある<a href="https://quarto.org/docs/websites/website-about.html#templates">テンプレート</a>から好みのものを設定します。</span>
+</dd>
+</dl>
+<section id="画像-optional" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="画像-optional"><span class="header-section-number">1.1</span> 画像 (optional)</h3>
+<p>もし、画像を載せる場合は、次のようにyamlヘッダーに書き加えます。</p>
+<div class="sourceCode" id="annotated-cell-3"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-3-2" class="code-annotation-target"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> path/to/image</span></span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">about</span><span class="kw">:</span></span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">template</span><span class="kw">:</span><span class="at"> ...</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-lines="2" data-code-cell="annotated-cell-3" data-code-annotation="1">例えば、ウェサイトのフォルダの中に<code>figures</code>というフォルダを作成し、そこに<code>profile.jpg</code>という画像を保存している場合は<code>figures/profile.jpg</code>と書きます。</span>
+</dd>
+</dl>
+<ul>
+<li><a href="https://quarto.org/docs/websites/website-about.html#image">画像の大きさや形状など</a>を変更できます。</li>
+</ul>
+</section>
+<section id="リンクボタン-optional" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="リンクボタン-optional"><span class="header-section-number">1.2</span> リンクボタン (optional)</h3>
+<p>名前の下にメールアドレスやSNSなど<a href="https://quarto.org/docs/websites/website-about.html#links">リンク</a>を貼りたい場合は、yamlヘッダーを次のように編集します。リンクは複数設定できます。</p>
+<ul>
+<li>ハイフン<code>=</code>の有無に注意してください。</li>
+</ul>
+<div class="sourceCode" id="annotated-cell-4"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> path/to/image</span></span>
+<span id="annotated-cell-4-3"><a href="#annotated-cell-4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">about</span><span class="kw">:</span></span>
+<span id="annotated-cell-4-4"><a href="#annotated-cell-4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">template</span><span class="kw">:</span><span class="at"> ...</span></span>
+<span id="annotated-cell-4-5"><a href="#annotated-cell-4-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">links</span><span class="kw">:</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-4-6" class="code-annotation-target"><a href="#annotated-cell-4-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> ...</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-4-7" class="code-annotation-target"><a href="#annotated-cell-4-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> ...</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-4-8" class="code-annotation-target"><a href="#annotated-cell-4-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> ...</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-lines="6" data-code-cell="annotated-cell-4" data-code-annotation="1"><code>icon</code>は<a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>がデフォルトで利用できます。適当に検索して気に入ったアイコンの名前を入れます。例えば<code>mail</code>で検索すると<code>envelope</code>というアイコンがあるので、<code>envelope</code>と入力します。</span>
+</dd>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-lines="7" data-code-cell="annotated-cell-4" data-code-annotation="2"><code>text</code>はその名の通り表示する文字列を入力します。<code>icon</code>や<code>text</code>はどちらか一方でも問題ありません。</span>
+</dd>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-lines="8" data-code-cell="annotated-cell-4" data-code-annotation="3"><code>href</code>はリンク先を入力します。メールアドレスの場合は<code>mailto:</code>をメールアドレスの前に付けます。例えば、<code>mailto:sdoi@juris.hokudai.ac.jp</code>など。</span>
+</dd>
+</dl>
+<p>ところで、デフォルトでは同じタブでリンク先のページに移動します。リンク先のページを新しいタブで表示したい場合は<code>_quarto.yml</code>を変更します。</p>
+<div class="sourceCode" id="annotated-cell-5"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="annotated-cell-5-2"><a href="#annotated-cell-5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="annotated-cell-5-3"><a href="#annotated-cell-5-3" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-5-4" class="code-annotation-target"><a href="#annotated-cell-5-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">link-external-newwindow</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="annotated-cell-5-5"><a href="#annotated-cell-5-5" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-lines="4" data-code-cell="annotated-cell-5" data-code-annotation="1">このように変更します。</span>
+</dd>
+</dl>
+<p>気に入ったテンプレートがない場合（特に画像が不要な場合）はAbout Pageを使わなくてよいでしょう。</p>
+</section>
+</section>
+<section id="マークダウン" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="マークダウン"><span class="header-section-number">2</span> マークダウン</h2>
+<p>それでは、いよいよ自分紹介を書いていきます。Quartoでは<a href="https://quarto.org/docs/authoring/markdown-basics.html">マークダウン記法</a>によって見た目や機能を変更することができます。</p>
+<p>以下では、ウェブサイト作成において使用する頻度の多いと思われるものを取り上げます。</p>
+<section id="見出し" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="見出し"><span class="header-section-number">2.1</span> 見出し</h3>
+<p>もし、<a href="https://quarto.org/docs/authoring/markdown-basics.html#headings">見出し</a>で区切りたい場合は<code>#</code>を使います。<code>#</code>が増えていくと、より細かいレベルの見出しになります。</p>
+<ul>
+<li>Quartoでは<code>##</code>から始めることが多いように思います。</li>
+<li>HTMLにおける<code>h1</code>などに対応しています。</li>
+</ul>
+</section>
+<section id="箇条書き" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="箇条書き"><span class="header-section-number">2.2</span> 箇条書き</h3>
+<p><a href="https://quarto.org/docs/authoring/markdown-basics.html#lists">箇条書き</a>をする場合、順番がない場合は<code>*</code>や<code>-</code>などの記号を、順番がある場合は<code>1.</code>のように半角数字とピリオドを使います。</p>
+<ul>
+<li>全てを<code>1.</code>にしても自動で数字が割り振られます。</li>
+</ul>
+<p>箇条書きをネストする場合はインデントを入れます。</p>
+</section>
+<section id="リンク" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="リンク"><span class="header-section-number">2.3</span> リンク</h3>
+<p><a href="https://quarto.org/docs/authoring/markdown-basics.html#links-images">リンク</a>を貼る場合、URLをそのまま表示する場合は<code>&lt;URL&gt;</code>とし、リンク先を直接表示しない場合は<code>[表示されるテキスト](URL)</code>と書きます。</p>
+</section>
+<section id="画像" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="画像"><span class="header-section-number">2.4</span> 画像</h3>
+<p><a href="https://quarto.org/docs/authoring/figures.html">画像</a>を挿入する場合は<code>![キャプション](path/to/image)</code>と書きます。</p>
+</section>
+<section id="コールアウトブロック" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="コールアウトブロック"><span class="header-section-number">2.5</span> コールアウト・ブロック</h3>
+<p><a href="https://quarto.org/docs/authoring/callouts.html">コールアウト・ブロック</a>を表示させることもできます。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-...}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## タイトル</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ブロックの内容</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+タイトル
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ブロックの内容</p>
+</div>
+</div>
+<ul>
+<li><code>callout-...</code>の<code>...</code>で種類を決めます。</li>
+<li>ブロックにタイトルをつける場合は、ブロック内で<code>##</code>とするか、チャンクオプションで<code>{.callout-... title = "..."}</code>とします。</li>
+<li>ブロックの見た目を変える場合は、<code>_quarto.yml</code>で<code>callout-appearance:...</code>とするか、チャンクオプションで<code>{.callout-... appearance = "..."}</code>とします。</li>
+<li>ブロックをタイトルだけ表示させ、クリックした時に内容が見えるようにするには、チャンクオプションで<code>{.callout-... collapse=true}</code>とします。</li>
+</ul>
+</section>
+<section id="強調" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="強調"><span class="header-section-number">2.6</span> 強調</h3>
+<p>強調や打ち消しなど<a href="https://quarto.org/docs/authoring/markdown-basics.html#text-formatting">文字列を修飾</a>することができます。</p>
+<ul>
+<li><strong>強調</strong>：<code>**テキスト**</code></li>
+</ul>
+</section>
+<section id="タブセット" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="タブセット"><span class="header-section-number">2.7</span> タブセット</h3>
+<p><a href="https://quarto.org/docs/output-formats/html-basics.html#tabsets">タブセット</a>を使うことで、限られたスペースに複数の情報を載せることができます。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## タイトル1</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>1つ目の（最初に表示されている）タブの内容</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## タイトル2</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>2つ目のタブの内容</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">タイトル1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">タイトル2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>1つ目の（最初に表示されている）タブの内容</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>2つ目のタブの内容</p>
+</div>
+</div>
+</div>
+</section>
+<section id="脚注-optional" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="脚注-optional"><span class="header-section-number">2.8</span> 脚注 (optional)</h3>
+<p><a href="https://quarto.org/docs/authoring/footnotes-and-citations.html#footnotes">脚注</a>をつける場合は2通りのやり方があります。</p>
+<ol type="1">
+<li><code>^[脚注の内容]</code></li>
+<li><code>[^1]</code>で脚注の挿入記号、<code>[^1]: 脚注の内容</code></li>
+</ol>
+<p>脚注を右の余白に表示したい場合は、<code>_quarto.yml</code>に次のように書きます。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference-location</span><span class="kw">:</span><span class="at"> margin</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="表-optional" class="level3" data-number="2.9">
+<h3 data-number="2.9" class="anchored" data-anchor-id="表-optional"><span class="header-section-number">2.9</span> 表 (optional)</h3>
+<p><a href="https://quarto.org/docs/authoring/tables.html">表</a>を挿入する場合もテキストで入力します。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>| Right | Left | Default | Center |</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>|------:|:-----|---------|:------:|</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>|   12  |  12  |    12   |    12  |</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>|  123  |  123 |   123   |   123  |</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>|    1  |    1 |     1   |     1  |</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Right</th>
+<th style="text-align: left;">Left</th>
+<th>Default</th>
+<th style="text-align: center;">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">12</td>
+<td>12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">123</td>
+<td>123</td>
+<td style="text-align: center;">123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1</td>
+<td>1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://notepm.jp/markdown-table-tool">このようなツール</a>を使うと楽かもしれません。</li>
+</ul>
+</section>
+</section>
+<section id="フッター" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="フッター"><span class="header-section-number">3</span> フッター</h2>
+<p><a href="https://quarto.org/docs/websites/website-navigation.html#page-footer">フッター</a>を作成する場合は<code>_quarto.yml</code>の<code>website:</code>配下で設定します</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"気楽にウェブサイト"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">  ...</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">page-footer</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">  ...</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "コピーしました");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "コピーしました");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2023, Shohei Doi</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

@@ -78,7 +78,7 @@ GitHubのリポジトリを作成します。GitHub Pagesでウェブサイト�
 
 `_quarto.yml`というファイルを開きます。
 
-- このファイルはウェブサイト全体の設定を記述するものです。
+- このyamlファイルはウェブサイト全体の設定を記述するものです。
 
 ```yaml
 project:
@@ -86,14 +86,30 @@ project:
   output-dir: docs # <1>
 ```
 
-1. この行を追記します。
+1. この行を追記します。後にGitHubで公開する際のおまじないです。
 
-- `yaml`ではインデントが重要になるので、間違えないでください。
-- 後にGitHubで公開する際のおまじないです。
+:::{.callout-important}
+## yamlの注意点
+
+`_quarto.yml`や後述するyamlヘッダーでは、インデントとコロンのあとのスペースが重要です。これらを間違えると上手く動かないので気をつけてください。
+:::
 
 ## ウェブサイトの作成
 
-`index.qmd`ファイルを開き、右上の`Render`というボタンをクリックします。
+`about.qmd`と`styles.css`というファイルを削除します。また、`_quarto.yml`からも削除します。
+
+```yaml
+website:
+  title: "..."
+  navbar:
+    left:
+      - index.qmd
+      - about.qmd # <1>
+```
+
+1. これを削除する。
+
+`index.qmd`ファイルを開き、右上の[`Render`](https://quarto.org/docs/tools/vscode.html)というボタンをクリックします。
 
 - `index.qmd`は一番最初に表示されるウェブサイトです。
 
@@ -116,7 +132,7 @@ website:
   google-analytics: "G-..." # <1>
 ```
 
-1. この行を追記します。
+1. [この行を追記します。](https://quarto.org/docs/websites/website-tools.html#google-analytics)
 
 そのうち、測定が開始されます。
 
@@ -147,8 +163,9 @@ $\leadsto$これにより、変更内容がリポジトリに記録されます�
 今後は、VS Codeで
 
 1. `.qmd`ファイルを編集
-2. `Render`でウェブサイトを作成
-3. `add & commit`で変更を保存
-4. `push`で公開
+1. `Reload`で変更を確認
+1. `Render`で`.qmd`ファイルからウェブサイトを作成
+1. `add & commit`で変更を保存
+1. `push`で公開
 
 という手順になります。
