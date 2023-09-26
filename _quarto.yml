@@ -12,6 +12,7 @@ website:
       - multiple-contents.qmd
       - theme.qmd
       - advanced.qmd
+  page-navigation: true
   page-footer: "Copyright 2023, Shohei Doi"
 
 format:
