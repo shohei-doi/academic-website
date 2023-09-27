@@ -98,6 +98,16 @@ format:
 - Quartoでは`##`から始めることが多いように思います。
 - HTMLにおける`h1`などに対応しています。
 
+見出しに番号を振りたい場合は、`html:`配下で次のように書きます。
+
+```yaml
+format:
+  html:
+    ...
+    number-sections: true
+    ...
+```
+
 ### 箇条書き
 
 [箇条書き](https://quarto.org/docs/authoring/markdown-basics.html#lists)をする場合、順番がない場合は`*`や`-`などの記号を、順番がある場合は`1.`のように半角数字とピリオドを使います。

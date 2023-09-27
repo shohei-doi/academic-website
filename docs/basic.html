@@ -232,7 +232,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="3" data-code-cell="annotated-cell-2" data-code-annotation="1">5つある<a href="https://quarto.org/docs/websites/website-about.html#templates">テンプレート</a>から好みのものを設定します。</span>
+<span data-code-annotation="1" data-code-lines="3" data-code-cell="annotated-cell-2">5つある<a href="https://quarto.org/docs/websites/website-about.html#templates">テンプレート</a>から好みのものを設定します。</span>
 </dd>
 </dl>
 <section id="画像-optional" class="level3" data-number="1.1">
@@ -245,7 +245,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="2" data-code-cell="annotated-cell-3" data-code-annotation="1">例えば、ウェサイトのフォルダの中に<code>figures</code>というフォルダを作成し、そこに<code>profile.jpg</code>という画像を保存している場合は<code>figures/profile.jpg</code>と書きます。</span>
+<span data-code-annotation="1" data-code-lines="2" data-code-cell="annotated-cell-3">例えば、ウェサイトのフォルダの中に<code>figures</code>というフォルダを作成し、そこに<code>profile.jpg</code>という画像を保存している場合は<code>figures/profile.jpg</code>と書きます。</span>
 </dd>
 </dl>
 <ul>
@@ -269,15 +269,15 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="6" data-code-cell="annotated-cell-4" data-code-annotation="1"><code>icon</code>は<a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>がデフォルトで利用できます。適当に検索して気に入ったアイコンの名前を入れます。例えば<code>mail</code>で検索すると<code>envelope</code>というアイコンがあるので、<code>envelope</code>と入力します。</span>
+<span data-code-annotation="1" data-code-lines="6" data-code-cell="annotated-cell-4"><code>icon</code>は<a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>がデフォルトで利用できます。適当に検索して気に入ったアイコンの名前を入れます。例えば<code>mail</code>で検索すると<code>envelope</code>というアイコンがあるので、<code>envelope</code>と入力します。</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="7" data-code-cell="annotated-cell-4" data-code-annotation="2"><code>text</code>はその名の通り表示する文字列を入力します。<code>icon</code>や<code>text</code>はどちらか一方でも問題ありません。</span>
+<span data-code-annotation="2" data-code-lines="7" data-code-cell="annotated-cell-4"><code>text</code>はその名の通り表示する文字列を入力します。<code>icon</code>や<code>text</code>はどちらか一方でも問題ありません。</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="8" data-code-cell="annotated-cell-4" data-code-annotation="3"><code>href</code>はリンク先を入力します。メールアドレスの場合は<code>mailto:</code>をメールアドレスの前に付けます。例えば、<code>mailto:sdoi@juris.hokudai.ac.jp</code>など。</span>
+<span data-code-annotation="3" data-code-lines="8" data-code-cell="annotated-cell-4"><code>href</code>はリンク先を入力します。メールアドレスの場合は<code>mailto:</code>をメールアドレスの前に付けます。例えば、<code>mailto:sdoi@juris.hokudai.ac.jp</code>など。</span>
 </dd>
 </dl>
 <p>ところで、デフォルトでは同じタブでリンク先のページに移動します。リンク先のページを新しいタブで表示したい場合は<code>_quarto.yml</code>を変更します。</p>
@@ -289,7 +289,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="4" data-code-cell="annotated-cell-5" data-code-annotation="1">このように変更します。</span>
+<span data-code-annotation="1" data-code-lines="4" data-code-cell="annotated-cell-5">このように変更します。</span>
 </dd>
 </dl>
 <p>気に入ったテンプレートがない場合（特に画像が不要な場合）はAbout Pageを使わなくてよいでしょう。</p>
@@ -306,6 +306,12 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <li>Quartoでは<code>##</code>から始めることが多いように思います。</li>
 <li>HTMLにおける<code>h1</code>などに対応しています。</li>
 </ul>
+<p>見出しに番号を振りたい場合は、<code>html:</code>配下で次のように書きます。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="箇条書き" class="level3" data-number="2.2">
 <h3 data-number="2.2" class="anchored" data-anchor-id="箇条書き"><span class="header-section-number">2.2</span> 箇条書き</h3>
@@ -326,11 +332,11 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <section id="コールアウトブロック" class="level3" data-number="2.5">
 <h3 data-number="2.5" class="anchored" data-anchor-id="コールアウトブロック"><span class="header-section-number">2.5</span> コールアウト・ブロック</h3>
 <p><a href="https://quarto.org/docs/authoring/callouts.html">コールアウト・ブロック</a>を表示させることもできます。</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-...}</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## タイトル</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ブロックの内容</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-...}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## タイトル</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>ブロックの内容</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -361,16 +367,16 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <section id="タブセット" class="level3" data-number="2.7">
 <h3 data-number="2.7" class="anchored" data-anchor-id="タブセット"><span class="header-section-number">2.7</span> タブセット</h3>
 <p><a href="https://quarto.org/docs/output-formats/html-basics.html#tabsets">タブセット</a>を使うことで、限られたスペースに複数の情報を載せることができます。</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## タイトル1</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>1つ目の（最初に表示されている）タブの内容</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## タイトル2</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>2つ目のタブの内容</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## タイトル1</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>1つ目の（最初に表示されている）タブの内容</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## タイトル2</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>2つ目のタブの内容</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">タイトル1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">タイトル2</a></li></ul>
 <div class="tab-content">
@@ -391,20 +397,20 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <li><code>[^1]</code>で脚注の挿入記号、<code>[^1]: 脚注の内容</code></li>
 </ol>
 <p>脚注を右の余白に表示したい場合は、<code>_quarto.yml</code>に次のように書きます。</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference-location</span><span class="kw">:</span><span class="at"> margin</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference-location</span><span class="kw">:</span><span class="at"> margin</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="表-optional" class="level3" data-number="2.9">
 <h3 data-number="2.9" class="anchored" data-anchor-id="表-optional"><span class="header-section-number">2.9</span> 表 (optional)</h3>
 <p><a href="https://quarto.org/docs/authoring/tables.html">表</a>を挿入する場合もテキストで入力します。</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>| Right | Left | Default | Center |</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>|------:|:-----|---------|:------:|</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>|   12  |  12  |    12   |    12  |</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>|  123  |  123 |   123   |   123  |</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>|    1  |    1 |     1   |     1  |</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>| Right | Left | Default | Center |</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>|------:|:-----|---------|:------:|</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>|   12  |  12  |    12   |    12  |</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>|  123  |  123 |   123   |   123  |</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>|    1  |    1 |     1   |     1  |</span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <table class="table">
 <thead>
 <tr class="header">
@@ -443,11 +449,11 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <section id="フッター" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="フッター"><span class="header-section-number">3</span> フッター</h2>
 <p><a href="https://quarto.org/docs/websites/website-navigation.html#page-footer">フッター</a>を作成する場合は<code>_quarto.yml</code>の<code>website:</code>配下で設定します</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">  ...</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">page-footer</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">  ...</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  ...</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">page-footer</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">  ...</span></span></code><button title="コピー" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
