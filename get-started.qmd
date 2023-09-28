@@ -27,9 +27,19 @@ title: "セットアップ"
 
 :::
 
-### Git
+### GitHub
 
-GitHubでウェブサイトを公開するために、OSに合わせて[Git](https://git-scm.com/)をインストールします。
+[GitHub](https://github.com/)でアカウントを作成します。**アカウント名はウェブサイトのURLになるので、それを念頭に置いて決めてください。**
+
+GitHubのリポジトリを作成します。GitHub Pagesでウェブサイトを公開するためには、`<username>.github.io`という名前のリポジトリを作成する必要があります。
+
+- 例えば、GitHubアカウント名が`shohe-doi`であれば、`shohei-doi.github.io`というリポジトリ名にします。また、URLは`https://shohei-doi.github.io/`となります。
+
+### Git (optional)
+
+GitHubで直接、手動でウェブサイトのファイルをアップロードする場合はこのセクションと次のセクションは飛ばしてください。
+
+VS Codeを経由してGitHubでウェブサイトを公開するために、OSに合わせて[Git](https://git-scm.com/)をインストールします。
 
 - インストール方法はいろいろあるようなので、調べてください。
 - VS codeをデフォルトに設定しておきましょう。
@@ -40,17 +50,7 @@ git config --global user.name "ユーザー名"
 git config --global user.email "メールアドレス"
 ```
 
-### GitHub
-
-[GitHub](https://github.com/)でアカウントを作成します。**アカウント名はウェブサイトのURLになるので、それを念頭に置いて決めてください。**
-
-GitHubのリポジトリを作成します。GitHub Pagesでウェブサイトを公開するためには、`<username>.github.io`という名前のリポジトリを作成する必要があります。
-
-- 例えば、GitHubアカウント名が`shohe-doi`であれば、`shohei-doi.github.io`というリポジトリ名にします。また、URLは`https://shohei-doi.github.io/`となります。
-
-### VS codeとGitHubの連携
-
-<!-- 左のExtentions（4つの正方形のボタン）を押して、`GitHub Pull Requests and Issues`をインストールします。 -->
+### VS codeとGitHubの連携 (optional)
 
 `Source Control`（二股に分かれているひもみたいなボタン）から`Clone Repository`をクリックします。
 
@@ -144,7 +144,13 @@ website:
 
 ## ウェブサイトの公開
 
-以降、ファイルを修正するたびに`Source Control`をクリックして、次の作業を行います。
+### 手動でアップロード
+
+GitHubでウェブサイトのリポジトリを開き、`docs`フォルダ**ごと**アップロードします。
+
+### VS Code上でアップロード (optional)
+
+ファイルを修正するたびに`Source Control`をクリックして、次の作業を行います。
 
 - `Changes`の横の`+`ボタンをクリックして、変更を"add"します。
   - "add"したファイルを戻す場合は`-`ボタンをクリックします。
@@ -155,6 +161,8 @@ $\leadsto$これにより、変更内容がリポジトリに記録されます�
 ウェブサイトを公開する場合は、`push`を行います（次回から`Sync Changes`というボタンでも可能）。
 
 - 初回はGitHubとの連携の許可を求められるかもしれません。
+
+### GitHub Pagesの設定
 
 最後に、GitHubでリポジトリのページに飛び、`Settings`の`Pages`で`Branch`をmasterのdocsに設定します。
 

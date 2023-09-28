@@ -6,85 +6,6 @@ title: "まずは作ってみる"
 
 一般的に、ウェブサイトでは`index.html`が最初に表示されるページになります。したがって、`index.qmd`を編集していきます。
 
-## About Pages
-
-Quartoのウェブサイトでは[About Pages](https://quarto.org/docs/websites/website-about.html)が、自己紹介用には良い感じのレイアウトを提供しています。
-
-`index.qmd`の冒頭に`---`で囲まれた箇所があります。これを**yamlヘッダー**と呼びます。ページの設定を書く場所になります。まずは、`title`を自分の名前にしましょう。
-
-```yaml
-title: "Your Name"
-```
-
-:::{.callout-note}
-## ウェブサイトの設定
-
-Quartoではウェブサイトの設定を記述する箇所が2つあります。
-
-1. `_quarto.yml`：ウェブサイト全体の設定
-1. `.qmd`ファイルのyamlヘッダー：特定のページの設定
-:::
-
-さらに、About Pageであることを明示します。
-
-```yaml
-title: "Your Name"
-about:
-template: ... # <1>
-```
-
-1. 5つある[テンプレート](https://quarto.org/docs/websites/website-about.html#templates)から好みのものを設定します。
-
-### 画像 (optional)
-
-もし、画像を載せる場合は、次のようにyamlヘッダーに書き加えます。
-
-```yaml
-title: "Your Name"
-image: path/to/image # <1>
-about:
-  template: ...
-```
-
-1. 例えば、ウェサイトのフォルダの中に`figures`というフォルダを作成し、そこに`profile.jpg`という画像を保存している場合は`figures/profile.jpg`と書きます。
-
-- [画像の大きさや形状など](https://quarto.org/docs/websites/website-about.html#image)を変更できます。
-
-### リンクボタン (optional)
-
-名前の下にメールアドレスやSNSなど[リンク](https://quarto.org/docs/websites/website-about.html#links)を貼りたい場合は、yamlヘッダーを次のように編集します。リンクは複数設定できます。
-
-- ハイフン`=`の有無に注意してください。
-
-```yaml
-title: "Your Name"
-image: path/to/image
-about:
-  template: ...
-  links:
-    - icon: ... # <1>
-      text: ... # <2>
-      href: ... # <3>
-```
-
-1. `icon`は[Bootstrap Icons](https://icons.getbootstrap.com/)がデフォルトで利用できます。適当に検索して気に入ったアイコンの名前を入れます。例えば`mail`で検索すると`envelope`というアイコンがあるので、`envelope`と入力します。
-2. `text`はその名の通り表示する文字列を入力します。`icon`や`text`はどちらか一方でも問題ありません。
-3. `href`はリンク先を入力します。メールアドレスの場合は`mailto:`をメールアドレスの前に付けます。例えば、`mailto:sdoi@juris.hokudai.ac.jp`など。
-
-ところで、デフォルトでは同じタブでリンク先のページに移動します。リンク先のページを新しいタブで表示したい場合は`_quarto.yml`を変更します。
-
-```yaml
-format:
-  html:
-    ...
-    link-external-newwindow: true # <1>
-    ...
-```
-
-1. このように変更します。
-
-気に入ったテンプレートがない場合（特に画像が不要な場合）はAbout Pageを使わなくてよいでしょう。
-
 ## マークダウン
 
 それでは、いよいよ自分紹介を書いていきます。Quartoでは[マークダウン記法](https://quarto.org/docs/authoring/markdown-basics.html)によって見た目や機能を変更することができます。
@@ -228,3 +149,82 @@ website:
   page-footer: "..."
   ...
 ```
+
+## About Pages
+
+Quartoのウェブサイトでは[About Pages](https://quarto.org/docs/websites/website-about.html)が、自己紹介用には良い感じのレイアウトを提供しています。
+
+`index.qmd`の冒頭に`---`で囲まれた箇所があります。これを**yamlヘッダー**と呼びます。ページの設定を書く場所になります。まずは、`title`を自分の名前にしましょう。
+
+```yaml
+title: "Your Name"
+```
+
+:::{.callout-note}
+## ウェブサイトの設定
+
+Quartoではウェブサイトの設定を記述する箇所が2つあります。
+
+1. `_quarto.yml`：ウェブサイト全体の設定
+1. `.qmd`ファイルのyamlヘッダー：特定のページの設定
+:::
+
+さらに、About Pageであることを明示します。
+
+```yaml
+title: "Your Name"
+about:
+template: ... # <1>
+```
+
+1. 5つある[テンプレート](https://quarto.org/docs/websites/website-about.html#templates)から好みのものを設定します。
+
+### 画像 (optional)
+
+もし、画像を載せる場合は、次のようにyamlヘッダーに書き加えます。
+
+```yaml
+title: "Your Name"
+image: path/to/image # <1>
+about:
+  template: ...
+```
+
+1. 例えば、ウェサイトのフォルダの中に`figures`というフォルダを作成し、そこに`profile.jpg`という画像を保存している場合は`figures/profile.jpg`と書きます。
+
+- [画像の大きさや形状など](https://quarto.org/docs/websites/website-about.html#image)を変更できます。
+
+### リンクボタン (optional)
+
+名前の下にメールアドレスやSNSなど[リンク](https://quarto.org/docs/websites/website-about.html#links)を貼りたい場合は、yamlヘッダーを次のように編集します。リンクは複数設定できます。
+
+- ハイフン`=`の有無に注意してください。
+
+```yaml
+title: "Your Name"
+image: path/to/image
+about:
+  template: ...
+  links:
+    - icon: ... # <1>
+      text: ... # <2>
+      href: ... # <3>
+```
+
+1. `icon`は[Bootstrap Icons](https://icons.getbootstrap.com/)がデフォルトで利用できます。適当に検索して気に入ったアイコンの名前を入れます。例えば`mail`で検索すると`envelope`というアイコンがあるので、`envelope`と入力します。
+2. `text`はその名の通り表示する文字列を入力します。`icon`や`text`はどちらか一方でも問題ありません。
+3. `href`はリンク先を入力します。メールアドレスの場合は`mailto:`をメールアドレスの前に付けます。例えば、`mailto:sdoi@juris.hokudai.ac.jp`など。
+
+ところで、デフォルトでは同じタブでリンク先のページに移動します。リンク先のページを新しいタブで表示したい場合は`_quarto.yml`を変更します。
+
+```yaml
+format:
+  html:
+    ...
+    link-external-newwindow: true # <1>
+    ...
+```
+
+1. このように変更します。
+
+気に入ったテンプレートがない場合（特に画像が不要な場合）はAbout Pageを使わなくてよいでしょう。

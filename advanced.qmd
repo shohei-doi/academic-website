@@ -45,3 +45,21 @@ title: "おまけ"
 [バッジ]{.badge .bg-primary}
 
 ただし、上手く動作しないものもある（例えばカード）もあるので過度に期待しないでください。
+
+## 検索に表示させない
+
+万が一、Googleなどの検索で表示されないようにしたい場合は、`_quarto.yml`ファイルで次のように追記します。
+
+```yaml
+format:
+  html:
+    ...
+    include-in-header: noindex.html
+    ...
+```
+
+また、`noindex.html`というファイルを作成し、以下の内容を記入します。
+
+```html
+<meta name="robots" content="noindex,nofollow" />
+```

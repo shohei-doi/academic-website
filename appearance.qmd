@@ -118,11 +118,6 @@ This column takes 2/3 of the page
 
 - 上記の例では左側の幅が4なので、4/12=1/3となります。同様に、右は2/3になります。
 
-ディスプレイのサイズに合わせてレイアウトを変更することを**レスポンシブ・デザイン**と呼びます。QuartoではBootstrapのレスポンシブ・デザインを使っています。これにより、PCでもスマホでも適切に表示されます。
-
-- Firefoxでは`More tools`の`Responsive Design Mode`で見え方を選択します。
-- ChromeやEdgeでは`More tools`の`Developer Tools`を開き、左上のボタンで見え方を選択します。
-
 ### 余白
 
 右の[余白](https://quarto.org/docs/authoring/article-layout.html#margin-content)にコンテンツを表示させることができます。
@@ -166,6 +161,15 @@ $primary: ...;
 他に個別に色を指定したい要素がある場合は適当な[Sass変数](https://www.colordic.org/)を上書きします。
 
 ## アクセシビリティ
+
+### レスポンシブ・デザイン
+
+ディスプレイのサイズに合わせてレイアウトを変更することを**レスポンシブ・デザイン**と呼びます。QuartoではBootstrapのレスポンシブ・デザインを使っています。これにより、PCでもスマホでも適切に表示されます。
+
+- Firefoxでは`More tools`の`Responsive Design Mode`で見え方を選択します。
+- ChromeやEdgeでは`More tools`の`Developer Tools`を開き、左上のボタンで見え方を選択します。
+
+### カラー・ユニバーサル・デザイン
 
 ウェブサイトやスライドは自分が見えているように他者にも見えているとは限りません。
 
