@@ -4,7 +4,7 @@ title: "セットアップ"
 
 まずは、使用するツールのセットアップをしつつ、ウェブサイトの作成から公開までの一連の流れを把握します。
 
-## ウェブサイト公開の準備
+## ツールのインストール
 
 ウェブサイトを公開する準備から始めたいと思います。今回は[GitHub Pages](https://docs.github.com/ja/pages)というサービスを使って、無料で公開します。
 
@@ -66,6 +66,10 @@ GitHubのリポジトリを作成します。GitHub Pagesでウェブサイト�
 
 また、VS CodeのExtentionsを押して、拡張機能としての`Quarto`をインストールします。
 
+## ウェブサイトの作成
+
+### 初期設定
+
 [ウェブサイトの雛形](https://quarto.org/docs/websites/)を作成します。
 
 - {{< kbd Ctrl-Shift-P >}}を押して、`quarto`と入力します。
@@ -94,8 +98,6 @@ project:
 `_quarto.yml`や後述するyamlヘッダーでは、インデントとコロンのあとのスペースが重要です。これらを間違えると上手く動かないので気をつけてください。
 :::
 
-## ウェブサイトの作成
-
 `about.qmd`と`styles.css`というファイルを削除します。また、`_quarto.yml`からも削除します。
 
 ```yaml
@@ -109,7 +111,9 @@ website:
 
 1. これを削除する。
 
-`index.qmd`ファイルを開き、右上の[`Render`](https://quarto.org/docs/tools/vscode.html)というボタンをクリックします。
+### レンダリング
+
+`index.qmd`ファイルを開き、右上の[`Preview`](https://quarto.org/docs/tools/vscode.html)というボタンをクリックします。
 
 - `index.qmd`は一番最初に表示されるウェブサイトです。
 
@@ -159,13 +163,13 @@ $\leadsto$これにより、変更内容がリポジトリに記録されます�
 - 最初の一回だけでOK。
 - `https://<username>.github.io`でもアクセスできることを確認しましょう。
 
-### 次回以降の手順
+## 次回以降の手順
 
 今後は、VS Codeで
 
 1. `.qmd`ファイルを編集
 1. `Reload`で変更を確認
-1. `Render`で`.qmd`ファイルからウェブサイトを作成
+1. `Preview`でウェブサイトを作成
 1. `add & commit`で変更を保存
 1. `push`で公開
 

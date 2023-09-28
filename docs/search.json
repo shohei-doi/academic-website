@@ -158,7 +158,7 @@
     "href": "get-started.html#ウェブサイトの作成",
     "title": "セットアップ",
     "section": "2 ウェブサイトの作成",
-    "text": "2 ウェブサイトの作成\nabout.qmdとstyles.cssというファイルを削除します。また、_quarto.ymlからも削除します。\nwebsite:\n  title: \"...\"\n  navbar:\n    left:\n      - index.qmd\n1      - about.qmd\n\n1\n\nこれを削除する。\n\n\nindex.qmdファイルを開き、右上のRenderというボタンをクリックします。\n\nindex.qmdは一番最初に表示されるウェブサイトです。\n\n\\(\\leadsto\\)うまく行けば、右側に生成されたウェブサイトが表示されます。\n\n2.1 Google Analytics (optional)\nGoogle Analyticsとはウェブサイトへのアクセスなどを解析するサービスです。\n\nGoogle Analyticsのアカウントを作成します。\nプロパティを作成します。\n\n設定は適当で構いません。\n\nプラットフォームでウェブを選択します。\n\nURLはhttps://&lt;username&gt;.github.ioに、ストリーム名は適当に決めます。\n\n測定IDをコピーし、_quarto.ymlを開きます。\n\nwebsite:\n  title: \"...\"\n1  google-analytics: \"G-...\"\n\n1\n\nこの行を追記します。\n\n\nそのうち、測定が開始されます。\n\nresearchmapも測定できます。"
+    "text": "2 ウェブサイトの作成\n\n2.1 初期設定\nウェブサイトの雛形を作成します。\n\nCtrl-Shift-Pを押して、quartoと入力します。\nCreate Projectを選択します。\nWebsite Projectを選択します。\n作成したフォルダ&lt;username&gt;.github.ioを選択します。\n/を入力してEnterを押します。\n\nうまくいっていると、index.qmdをはじめとするファイルが作成されています。\n_quarto.ymlというファイルを開きます。\n\nこのyamlファイルはウェブサイト全体の設定を記述するものです。\n\nproject:\n  type: website\n1  output-dir: docs\n\n1\n\nこの行を追記します。後にGitHubで公開する際のおまじないです。\n\n\n\n\n\n\n\n\nyamlの注意点\n\n\n\n_quarto.ymlや後述するyamlヘッダーでは、インデントとコロンのあとのスペースが重要です。これらを間違えると上手く動かないので気をつけてください。\n\n\nabout.qmdとstyles.cssというファイルを削除します。また、_quarto.ymlからも削除します。\nwebsite:\n  title: \"...\"\n  navbar:\n    left:\n      - index.qmd\n1      - about.qmd\n\n1\n\nこれを削除する。\n\n\n\n\n2.2 レンダリング\nindex.qmdファイルを開き、右上のRenderというボタンをクリックします。\n\nindex.qmdは一番最初に表示されるウェブサイトです。\n\n\\(\\leadsto\\)うまく行けば、右側に生成されたウェブサイトが表示されます。\n\n\n2.3 Google Analytics (optional)\nGoogle Analyticsとはウェブサイトへのアクセスなどを解析するサービスです。\n\nGoogle Analyticsのアカウントを作成します。\nプロパティを作成します。\n\n設定は適当で構いません。\n\nプラットフォームでウェブを選択します。\n\nURLはhttps://&lt;username&gt;.github.ioに、ストリーム名は適当に決めます。\n\n測定IDをコピーし、_quarto.ymlを開きます。\n\nwebsite:\n  title: \"...\"\n1  google-analytics: \"G-...\"\n\n1\n\nこの行を追記します。\n\n\nそのうち、測定が開始されます。\n\nresearchmapも測定できます。"
   },
   {
     "objectID": "get-started.html#ウェブサイトの公開",
@@ -166,5 +166,12 @@
     "title": "セットアップ",
     "section": "3 ウェブサイトの公開",
     "text": "3 ウェブサイトの公開\n以降、ファイルを修正するたびにSource Controlをクリックして、次の作業を行います。\n\nChangesの横の+ボタンをクリックして、変更を”add”します。\n\n“add”したファイルを戻す場合は-ボタンをクリックします。\n\n上部のMessageに変更内容を簡単に記載し（半角英数字）、Commitをクリックします。\n\n\\(\\leadsto\\)これにより、変更内容がリポジトリに記録されます。\nウェブサイトを公開する場合は、pushを行います（次回からSync Changesというボタンでも可能）。\n\n初回はGitHubとの連携の許可を求められるかもしれません。\n\n最後に、GitHubでリポジトリのページに飛び、SettingsのPagesでBranchをmasterのdocsに設定します。\n少し、時間が経つとYour site is live at...と表示されますので、公開されたウェブサイトにアクセスします。\n\n最初の一回だけでOK。\nhttps://&lt;username&gt;.github.ioでもアクセスできることを確認しましょう。\n\n\n3.1 次回以降の手順\n今後は、VS Codeで\n\n.qmdファイルを編集\nReloadで変更を確認\nRenderで.qmdファイルからウェブサイトを作成\nadd & commitで変更を保存\npushで公開\n\nという手順になります。"
+  },
+  {
+    "objectID": "get-started.html#ツールのインストール",
+    "href": "get-started.html#ツールのインストール",
+    "title": "セットアップ",
+    "section": "1 ツールのインストール",
+    "text": "1 ツールのインストール\nウェブサイトを公開する準備から始めたいと思います。今回はGitHub Pagesというサービスを使って、無料で公開します。\n\n1.1 Visual Studio Code\nウェブサイトを作成するために使用するVisual Studio Code (VS code) をインストールします。\n\n普段、RStudioを使用している人はそちらを使っても構いません。\n\n\n\n\n\n\n\n初期設定の変更\n\n\n\n\n\n左下の設定ボタンをクリックし、Themesから好みのテーマを選んでください。\nSettingsを適当に変更します。\n\nEditor: Word Wrapをonにします。\nEditor: Font Sizeを見やすい大きさにします。\n\n\n\n\n\n\n1.2 Git\nGitHubでウェブサイトを公開するために、OSに合わせてGitをインストールします。\n\nインストール方法はいろいろあるようなので、調べてください。\nVS codeをデフォルトに設定しておきましょう。\nユーザーネームとメールアドレスの登録まで行ってください。\n\ngit config --global user.name \"ユーザー名\"\ngit config --global user.email \"メールアドレス\"\n\n\n1.3 GitHub\nGitHubでアカウントを作成します。アカウント名はウェブサイトのURLになるので、それを念頭に置いて決めてください。\nGitHubのリポジトリを作成します。GitHub Pagesでウェブサイトを公開するためには、&lt;username&gt;.github.ioという名前のリポジトリを作成する必要があります。\n\n例えば、GitHubアカウント名がshohe-doiであれば、shohei-doi.github.ioというリポジトリ名にします。また、URLはhttps://shohei-doi.github.io/となります。\n\n\n\n1.4 VS codeとGitHubの連携\n\nSource Control（二股に分かれているひもみたいなボタン）からClone Repositoryをクリックします。\nClone from GitHubをクリックし、GitHubと連携し、先ほど作成したリポジトリを選択します。\nEnterを押して、ウェブサイト用のフォルダを保存したいフォルダを選択します。\n\n例えば、Documentというフォルダを選択すると、その中に&lt;username&gt;.github.ioというフォルダが作成されます。\n\n\n\n1.5 Quarto\n自分のOSに合ったQuartoをインストールします。\nまた、VS CodeのExtentionsを押して、拡張機能としてのQuartoをインストールします。"
   }
 ]

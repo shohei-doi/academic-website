@@ -164,7 +164,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
         <nav id="TOC" role="doc-toc" class="toc-active">
    
   <ul>
-  <li><a href="#ウェブサイト公開の準備" id="toc-ウェブサイト公開の準備" class="nav-link active" data-scroll-target="#ウェブサイト公開の準備"><span class="header-section-number">1</span> ウェブサイト公開の準備</a>
+  <li><a href="#ツールのインストール" id="toc-ツールのインストール" class="nav-link active" data-scroll-target="#ツールのインストール"><span class="header-section-number">1</span> ツールのインストール</a>
   <ul class="collapse">
   <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code"><span class="header-section-number">1.1</span> Visual Studio Code</a></li>
   <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><span class="header-section-number">1.2</span> Git</a></li>
@@ -174,7 +174,9 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
   </ul></li>
   <li><a href="#ウェブサイトの作成" id="toc-ウェブサイトの作成" class="nav-link" data-scroll-target="#ウェブサイトの作成"><span class="header-section-number">2</span> ウェブサイトの作成</a>
   <ul class="collapse">
-  <li><a href="#google-analytics-optional" id="toc-google-analytics-optional" class="nav-link" data-scroll-target="#google-analytics-optional"><span class="header-section-number">2.1</span> Google Analytics (optional)</a></li>
+  <li><a href="#初期設定" id="toc-初期設定" class="nav-link" data-scroll-target="#初期設定"><span class="header-section-number">2.1</span> 初期設定</a></li>
+  <li><a href="#レンダリング" id="toc-レンダリング" class="nav-link" data-scroll-target="#レンダリング"><span class="header-section-number">2.2</span> レンダリング</a></li>
+  <li><a href="#google-analytics-optional" id="toc-google-analytics-optional" class="nav-link" data-scroll-target="#google-analytics-optional"><span class="header-section-number">2.3</span> Google Analytics (optional)</a></li>
   </ul></li>
   <li><a href="#ウェブサイトの公開" id="toc-ウェブサイトの公開" class="nav-link" data-scroll-target="#ウェブサイトの公開"><span class="header-section-number">3</span> ウェブサイトの公開</a>
   <ul class="collapse">
@@ -204,8 +206,8 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 </header>
 
 <p>まずは、使用するツールのセットアップをしつつ、ウェブサイトの作成から公開までの一連の流れを把握します。</p>
-<section id="ウェブサイト公開の準備" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="ウェブサイト公開の準備"><span class="header-section-number">1</span> ウェブサイト公開の準備</h2>
+<section id="ツールのインストール" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="ツールのインストール"><span class="header-section-number">1</span> ツールのインストール</h2>
 <p>ウェブサイトを公開する準備から始めたいと思います。今回は<a href="https://docs.github.com/ja/pages">GitHub Pages</a>というサービスを使って、無料で公開します。</p>
 <section id="visual-studio-code" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="visual-studio-code"><span class="header-section-number">1.1</span> Visual Studio Code</h3>
@@ -268,6 +270,12 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <h3 data-number="1.5" class="anchored" data-anchor-id="quarto"><span class="header-section-number">1.5</span> Quarto</h3>
 <p>自分のOSに合ったQuartoを<a href="https://quarto.org/docs/get-started/">インストール</a>します。</p>
 <p>また、VS CodeのExtentionsを押して、拡張機能としての<code>Quarto</code>をインストールします。</p>
+</section>
+</section>
+<section id="ウェブサイトの作成" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="ウェブサイトの作成"><span class="header-section-number">2</span> ウェブサイトの作成</h2>
+<section id="初期設定" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="初期設定"><span class="header-section-number">2.1</span> 初期設定</h3>
 <p><a href="https://quarto.org/docs/websites/">ウェブサイトの雛形</a>を作成します。</p>
 <ul>
 <li><kbd>Ctrl-Shift-P</kbd>を押して、<code>quarto</code>と入力します。</li>
@@ -303,10 +311,6 @@ yamlの注意点
 <p><code>_quarto.yml</code>や後述するyamlヘッダーでは、インデントとコロンのあとのスペースが重要です。これらを間違えると上手く動かないので気をつけてください。</p>
 </div>
 </div>
-</section>
-</section>
-<section id="ウェブサイトの作成" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="ウェブサイトの作成"><span class="header-section-number">2</span> ウェブサイトの作成</h2>
 <p><code>about.qmd</code>と<code>styles.css</code>というファイルを削除します。また、<code>_quarto.yml</code>からも削除します。</p>
 <div class="sourceCode" id="annotated-cell-3"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
 <span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
@@ -320,13 +324,17 @@ yamlの注意点
 <span data-code-annotation="1" data-code-cell="annotated-cell-3" data-code-lines="6">これを削除する。</span>
 </dd>
 </dl>
+</section>
+<section id="レンダリング" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="レンダリング"><span class="header-section-number">2.2</span> レンダリング</h3>
 <p><code>index.qmd</code>ファイルを開き、右上の<a href="https://quarto.org/docs/tools/vscode.html"><code>Render</code></a>というボタンをクリックします。</p>
 <ul>
 <li><code>index.qmd</code>は一番最初に表示されるウェブサイトです。</li>
 </ul>
 <p><span class="math inline">\(\leadsto\)</span>うまく行けば、右側に生成されたウェブサイトが表示されます。</p>
-<section id="google-analytics-optional" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="google-analytics-optional"><span class="header-section-number">2.1</span> Google Analytics (optional)</h3>
+</section>
+<section id="google-analytics-optional" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="google-analytics-optional"><span class="header-section-number">2.3</span> Google Analytics (optional)</h3>
 <p><a href="https://marketingplatform.google.com/intl/ja/about/analytics/">Google Analytics</a>とはウェブサイトへのアクセスなどを解析するサービスです。</p>
 <ul>
 <li>Google Analyticsのアカウントを作成します。</li>
