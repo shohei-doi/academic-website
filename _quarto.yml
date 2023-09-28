@@ -10,7 +10,7 @@ website:
       - get-started.qmd
       - basic.qmd
       - multiple-contents.qmd
-      - theme.qmd
+      - appearance.qmd
       - advanced.qmd
   page-navigation: true
   page-footer: "Copyright 2023, Shohei Doi"

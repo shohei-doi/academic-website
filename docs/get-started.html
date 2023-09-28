@@ -142,7 +142,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
  <span class="menu-text">内容を増やす</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./theme.html" rel="" target="">
+    <a class="nav-link" href="./appearance.html" rel="" target="">
  <span class="menu-text">見た目を整える</span></a>
   </li>  
   <li class="nav-item">
@@ -178,10 +178,8 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
   <li><a href="#レンダリング" id="toc-レンダリング" class="nav-link" data-scroll-target="#レンダリング"><span class="header-section-number">2.2</span> レンダリング</a></li>
   <li><a href="#google-analytics-optional" id="toc-google-analytics-optional" class="nav-link" data-scroll-target="#google-analytics-optional"><span class="header-section-number">2.3</span> Google Analytics (optional)</a></li>
   </ul></li>
-  <li><a href="#ウェブサイトの公開" id="toc-ウェブサイトの公開" class="nav-link" data-scroll-target="#ウェブサイトの公開"><span class="header-section-number">3</span> ウェブサイトの公開</a>
-  <ul class="collapse">
-  <li><a href="#次回以降の手順" id="toc-次回以降の手順" class="nav-link" data-scroll-target="#次回以降の手順"><span class="header-section-number">3.1</span> 次回以降の手順</a></li>
-  </ul></li>
+  <li><a href="#ウェブサイトの公開" id="toc-ウェブサイトの公開" class="nav-link" data-scroll-target="#ウェブサイトの公開"><span class="header-section-number">3</span> ウェブサイトの公開</a></li>
+  <li><a href="#次回以降の手順" id="toc-次回以降の手順" class="nav-link" data-scroll-target="#次回以降の手順"><span class="header-section-number">4</span> 次回以降の手順</a></li>
   </ul>
 </nav>
     </div>
@@ -295,7 +293,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-cell="annotated-cell-2" data-code-lines="3">この行を追記します。後にGitHubで公開する際のおまじないです。</span>
+<span data-code-lines="3" data-code-cell="annotated-cell-2" data-code-annotation="1">この行を追記します。後にGitHubで公開する際のおまじないです。</span>
 </dd>
 </dl>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -321,13 +319,13 @@ yamlの注意点
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-cell="annotated-cell-3" data-code-lines="6">これを削除する。</span>
+<span data-code-lines="6" data-code-cell="annotated-cell-3" data-code-annotation="1">これを削除する。</span>
 </dd>
 </dl>
 </section>
 <section id="レンダリング" class="level3" data-number="2.2">
 <h3 data-number="2.2" class="anchored" data-anchor-id="レンダリング"><span class="header-section-number">2.2</span> レンダリング</h3>
-<p><code>index.qmd</code>ファイルを開き、右上の<a href="https://quarto.org/docs/tools/vscode.html"><code>Render</code></a>というボタンをクリックします。</p>
+<p><code>index.qmd</code>ファイルを開き、右上の<a href="https://quarto.org/docs/tools/vscode.html"><code>Preview</code></a>というボタンをクリックします。</p>
 <ul>
 <li><code>index.qmd</code>は一番最初に表示されるウェブサイトです。</li>
 </ul>
@@ -354,7 +352,7 @@ yamlの注意点
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-cell="annotated-cell-4" data-code-lines="3"><a href="https://quarto.org/docs/websites/website-tools.html#google-analytics">この行を追記します。</a></span>
+<span data-code-lines="3" data-code-cell="annotated-cell-4" data-code-annotation="1"><a href="https://quarto.org/docs/websites/website-tools.html#google-analytics">この行を追記します。</a></span>
 </dd>
 </dl>
 <p>そのうち、測定が開始されます。</p>
@@ -384,20 +382,20 @@ yamlの注意点
 <li>最初の一回だけでOK。</li>
 <li><code>https://&lt;username&gt;.github.io</code>でもアクセスできることを確認しましょう。</li>
 </ul>
-<section id="次回以降の手順" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="次回以降の手順"><span class="header-section-number">3.1</span> 次回以降の手順</h3>
+</section>
+<section id="次回以降の手順" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="次回以降の手順"><span class="header-section-number">4</span> 次回以降の手順</h2>
 <p>今後は、VS Codeで</p>
 <ol type="1">
 <li><code>.qmd</code>ファイルを編集</li>
 <li><code>Reload</code>で変更を確認</li>
-<li><code>Render</code>で<code>.qmd</code>ファイルからウェブサイトを作成</li>
+<li><code>Preview</code>でウェブサイトを作成</li>
 <li><code>add &amp; commit</code>で変更を保存</li>
 <li><code>push</code>で公開</li>
 </ol>
 <p>という手順になります。</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
